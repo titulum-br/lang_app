@@ -133,7 +133,7 @@ const FlashcardGameScreen = () => {
       
       // If all else fails, use the test audio
       console.log('No syllable audio found at all. Using test audio.');
-      await playAudio(testAudio.test, setSound, setIsPlayingAudio);
+      await playAudio(audioMap['direct-test-klaus.mp3'], setSound, setIsPlayingAudio);
       
     } else if (type === 'word') {
       // We want to play a word audio

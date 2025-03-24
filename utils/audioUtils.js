@@ -10,7 +10,7 @@ import { Audio } from 'expo-av';
 import * as FileSystem from 'expo-file-system';
 import { Asset } from 'expo-asset';
 import { Platform, Alert } from 'react-native';
-import { testAudio } from '../assets/audioImports';
+import { audioMap } from '../assets/audioImports';
 
 // Get a random number between 1-3 for audio sample variation
 export const getRandomSampleNumber = () => Math.floor(Math.random() * 3) + 1;
@@ -22,10 +22,12 @@ export const getAudioPath = (flashcard, isSyllable) => {
   
   if (isSyllable) {
     // For syllable audio (first tip)
-    return `${FileSystem.documentDirectory}audio/audio-syllable-pt_br-${flashcard.item}-${flashcard.tip.toLowerCase()}-${voiceName}-${sampleNumber}.mp3`;
+    const key = `audio-syllable-pt_br-${flashcard.item}-${flashcard.tip.toLowerCase()}-${voiceName}-${sampleNumber}.mp3`;
+    return audioMap[key] || null;
   } else {
     // For word audio (full name)
-    return `${FileSystem.documentDirectory}audio/audio-word-pt_br-${flashcard.item}-${voiceName}-${sampleNumber}.mp3`;
+    const key = `audio-word-pt_br-${flashcard.item}-${voiceName}-${sampleNumber}.mp3`;
+    return audioMap[key] || null;
   }
 };
 
@@ -87,7 +89,7 @@ export const playAudio = async (audioSource, setSound, setIsPlayingAudio) => {
     // Try fallback to test audio
     try {
       console.log('Falling back to test audio');
-      const { sound: fallbackSound } = await Audio.Sound.createAsync(testAudio.test);
+      const { sound: fallbackSound } = await Audio.Sound.createAsync(audioMap['direct-test-klaus.mp3']);
       
       if (setSound) setSound(fallbackSound);
       

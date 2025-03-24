@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Language Learning App",
-    "slug": "language-learning-app",
+    "name": "Ling App",
+    "slug": "ling-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,20 +9,27 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#f4511e"
+      "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lingapp.mobile"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#f4511e"
+        "backgroundColor": "#ffffff"
       },
-      "package": "com.afasia.exercises"
+      "package": "com.lingapp.mobile",
+      "versionCode": 1,
+      "permissions": [
+        "INTERNET",
+        "MODIFY_AUDIO_SETTINGS",
+        "RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -30,6 +37,11 @@
     "plugins": [
       "expo-av"
     ],
-    "newArchEnabled": true
+    "newArchEnabled": true,
+    "extra": {
+      "eas": {
+        "projectId": "9eb8932a-4e2b-4231-95f5-3031ba04ff9f"
+      }
+    }
   }
-} 
+}
