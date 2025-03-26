@@ -1,0 +1,159 @@
+{
+  "animals": {
+    "cachorro": {
+      "name": "Cachorro",
+      "tip": "Ca",
+      "audioSyllable": "audio-syllable-language-cachorro-ca",
+      "audioWord": "audio-word-language-cachorro",
+      "images": "objeto-animal-cachorro"
+    },
+    "passaro": {
+      "name": "Pássaro",
+      "tip": "Pa",
+      "audioSyllable": "audio-syllable-language-passaro-pa",
+      "audioWord": "audio-word-language-passaro",
+      "images": "objeto-animal-passaro"
+    },
+    "gato": {
+      "name": "Gato",
+      "tip": "Ga",
+      "audioSyllable": "audio-syllable-language-gato-ga",
+      "audioWord": "audio-word-language-gato",
+      "images": "objeto-animal-gato"
+    },
+    "coelho": {
+      "name": "Coelho",
+      "tip": "Co",
+      "audioSyllable": "audio-syllable-language-coelho-co",
+      "audioWord": "audio-word-language-coelho",
+      "images": "objeto-animal-coelho"
+    },
+    "peixe": {
+      "name": "Peixe",
+      "tip": "Pei",
+      "audioSyllable": "audio-syllable-language-peixe-pei",
+      "audioWord": "audio-word-language-peixe",
+      "images": "objeto-animal-peixe"
+    }
+  },
+  "fruits": {
+    "maca": {
+      "name": "Maçã",
+      "tip": "Ma",
+      "audioSyllable": "audio-syllable-language-maca-ma",
+      "audioWord": "audio-word-language-maca",
+      "images": "objeto-fruta-maca"
+    },
+    "banana": {
+      "name": "Banana",
+      "tip": "Ba",
+      "audioSyllable": "audio-syllable-language-banana-ba",
+      "audioWord": "audio-word-language-banana",
+      "images": "objeto-fruta-banana" 
+    },
+    "laranja": {
+      "name": "Laranja",
+      "tip": "La",
+      "audioSyllable": "audio-syllable-language-laranja-la",
+      "audioWord": "audio-word-language-laranja",
+      "images": "objeto-fruta-laranja"
+    },
+    "uvas": {
+      "name": "Uvas",
+      "tip": "U",
+      "audioSyllable": "audio-syllable-language-uvas-u",
+      "audioWord": "audio-word-language-uvas",
+      "images": "objeto-fruta-uvas"
+    },
+    "morango": {
+      "name": "Morango",
+      "tip": "Mo",
+      "audioSyllable": "audio-syllable-language-morango-mo",
+      "audioWord": "audio-word-language-morango",
+      "images": "objeto-fruta-morango"
+    }
+  },
+  "flowers": {
+    "tulipa": {
+      "name": "Tulipa",
+      "tip": "Tu",
+      "audioSyllable": "audio-syllable-language-tulipa-tu",
+      "audioWord": "audio-word-language-tulipa",
+      "images": "objeto-flor-tulipa"
+    },
+    "rosa": {
+      "name": "Rosa",
+      "tip": "Ro",
+      "audioSyllable": "audio-syllable-language-rosa-ro",
+      "audioWord": "audio-word-language-rosa",
+      "images": "objeto-flor-rosa"
+    },
+    "girassol": {
+      "name": "Girassol",
+      "tip": "Gi",
+      "audioSyllable": "audio-syllable-language-girassol-gi",
+      "audioWord": "audio-word-language-girassol",
+      "images": "objeto-flor-girassol"
+    }
+  },
+  "furniture": {
+    "sofa": {
+      "name": "Sofá",
+      "tip": "So",
+      "audioSyllable": "audio-syllable-language-sofa-so",
+      "audioWord": "audio-word-language-sofa",
+      "images": "objeto-movel-sofa"
+    },
+    "cama": {
+      "name": "Cama",
+      "tip": "Ca",
+      "audioSyllable": "audio-syllable-language-cama-ca",
+      "audioWord": "audio-word-language-cama",
+      "images": "objeto-movel-cama"
+    },
+    "mesa": {
+      "name": "Mesa",
+      "tip": "Me",
+      "audioSyllable": "audio-syllable-language-mesa-me",
+      "audioWord": "audio-word-language-mesa",
+      "images": "objeto-movel-mesa"
+    }
+  },
+  "instruments": {
+    "violao": {
+      "name": "Violão",
+      "tip": "Vi",
+      "audioSyllable": "audio-syllable-language-violao-vi",
+      "audioWord": "audio-word-language-violao",
+      "images": "objeto-instrumento-violao"
+    },
+    "piano": {
+      "name": "Piano",
+      "tip": "Pi",
+      "audioSyllable": "audio-syllable-language-piano-pi",
+      "audioWord": "audio-word-language-piano",
+      "images": "objeto-instrumento-piano"
+    },
+    "violino": {
+      "name": "Violino",
+      "tip": "Vi",
+      "audioSyllable": "audio-syllable-language-violino-vi",
+      "audioWord": "audio-word-language-violino",
+      "images": "objeto-instrumento-violino"
+    },
+    "bateria": {
+      "name": "Bateria",
+      "tip": "Ba",
+      "audioSyllable": "audio-syllable-language-bateria-ba",
+      "audioWord": "audio-word-language-bateria",
+      "images": "objeto-instrumento-bateria"
+    },
+    "saxofone": {
+      "name": "Saxofone",
+      "tip": "Sa",
+      "audioSyllable": "audio-syllable-language-saxofone-sa",
+      "audioWord": "audio-word-language-saxofone",
+      "images": "objeto-instrumento-saxofone"
+    }
+  }
+} 
