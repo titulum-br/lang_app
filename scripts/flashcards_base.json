@@ -1,0 +1,170 @@
+{
+  "acessorio": {
+    "bolsa": {
+      "name": "Bolsa",
+      "images": "objeto-acessorio-bolsa",
+      "audioWord": "audio-word-pt_br-bolsa",
+      "audioSyllable": "audio-syllable-pt_br-bolsa-bo",
+      "tip": "bo"
+    },
+    "oculos": {
+      "name": "Oculos",
+      "images": "objeto-acessorio-oculos",
+      "audioWord": "audio-word-pt_br-oculos",
+      "audioSyllable": "audio-syllable-pt_br-oculos-oc",
+      "tip": "oc"
+    },
+    "relogio": {
+      "name": "Relogio",
+      "images": "objeto-acessorio-relogio",
+      "audioWord": "audio-word-pt_br-relogio",
+      "audioSyllable": "audio-syllable-pt_br-relogio-re",
+      "tip": "re"
+    }
+  },
+  "banheiro": {
+    "chuveiro": {
+      "name": "Chuveiro",
+      "images": "objeto-banheiro-chuveiro",
+      "audioWord": "audio-word-pt_br-chuveiro",
+      "audioSyllable": "audio-syllable-pt_br-chuveiro-ch",
+      "tip": "ch"
+    }
+  },
+  "calcado": {
+    "sapato": {
+      "name": "Sapato",
+      "images": "objeto-calcado-sapato",
+      "audioWord": "audio-word-pt_br-sapato",
+      "audioSyllable": "audio-syllable-pt_br-sapato-sa",
+      "tip": "sa"
+    }
+  },
+  "container": {
+    "garrafa": {
+      "name": "Garrafa",
+      "images": "objeto-container-garrafa",
+      "audioWord": "audio-word-pt_br-garrafa",
+      "audioSyllable": "audio-syllable-pt_br-garrafa-ga",
+      "tip": "ga"
+    }
+  },
+  "educativo": {
+    "livro": {
+      "name": "Livro",
+      "images": "objeto-educativo-livro",
+      "audioWord": "audio-word-pt_br-livro",
+      "audioSyllable": "audio-syllable-pt_br-livro-li",
+      "tip": "li"
+    }
+  },
+  "eletrodomestico": {
+    "geladeira": {
+      "name": "Geladeira",
+      "images": "objeto-eletrodomestico-geladeira",
+      "audioWord": "audio-word-pt_br-geladeira",
+      "audioSyllable": "audio-syllable-pt_br-geladeira-ge",
+      "tip": "ge"
+    },
+    "microondas": {
+      "name": "Microondas",
+      "images": "objeto-eletrodomestico-microondas",
+      "audioWord": "audio-word-pt_br-microondas",
+      "audioSyllable": "audio-syllable-pt_br-microondas-mi",
+      "tip": "mi"
+    }
+  },
+  "eletronico": {
+    "computador": {
+      "name": "Computador",
+      "images": "objeto-eletronico-computador",
+      "audioWord": "audio-word-pt_br-computador",
+      "audioSyllable": "audio-syllable-pt_br-computador-co",
+      "tip": "co"
+    },
+    "telefone": {
+      "name": "Telefone",
+      "images": "objeto-eletronico-telefone",
+      "audioWord": "audio-word-pt_br-telefone",
+      "audioSyllable": "audio-syllable-pt_br-telefone-te",
+      "tip": "te"
+    }
+  },
+  "escrita": {
+    "caneta": {
+      "name": "Caneta",
+      "images": "objeto-escrita-caneta",
+      "audioWord": "audio-word-pt_br-caneta",
+      "audioSyllable": "audio-syllable-pt_br-caneta-ca",
+      "tip": "ca"
+    }
+  },
+  "iluminacao": {
+    "lampada": {
+      "name": "Lampada",
+      "images": "objeto-iluminacao-lampada",
+      "audioWord": "audio-word-pt_br-lampada",
+      "audioSyllable": "audio-syllable-pt_br-lampada-la",
+      "tip": "la"
+    }
+  },
+  "metalico": {
+    "chave": {
+      "name": "Chave",
+      "images": "objeto-metalico-chave",
+      "audioWord": "audio-word-pt_br-chave",
+      "audioSyllable": "audio-syllable-pt_br-chave-ch",
+      "tip": "ch"
+    }
+  },
+  "moveis": {
+    "almofada": {
+      "name": "Almofada",
+      "images": "objeto-moveis-almofada",
+      "audioWord": "audio-word-pt_br-almofada",
+      "audioSyllable": "audio-syllable-pt_br-almofada-al",
+      "tip": "al"
+    },
+    "cadeira": {
+      "name": "Cadeira",
+      "images": "objeto-moveis-cadeira",
+      "audioWord": "audio-word-pt_br-cadeira",
+      "audioSyllable": "audio-syllable-pt_br-cadeira-ca",
+      "tip": "ca"
+    },
+    "mesa": {
+      "name": "Mesa",
+      "images": "objeto-moveis-mesa",
+      "audioWord": "audio-word-pt_br-mesa",
+      "audioSyllable": "audio-syllable-pt_br-mesa-me",
+      "tip": "me"
+    }
+  },
+  "papelaria": {
+    "caderno": {
+      "name": "Caderno",
+      "images": "objeto-papelaria-caderno",
+      "audioWord": "audio-word-pt_br-caderno",
+      "audioSyllable": "audio-syllable-pt_br-caderno-ca",
+      "tip": "ca"
+    }
+  },
+  "utensilio": {
+    "tesoura": {
+      "name": "Tesoura",
+      "images": "objeto-utensilio-tesoura",
+      "audioWord": "audio-word-pt_br-tesoura",
+      "audioSyllable": "audio-syllable-pt_br-tesoura-te",
+      "tip": "te"
+    }
+  },
+  "vidro": {
+    "copo": {
+      "name": "Copo",
+      "images": "objeto-vidro-copo",
+      "audioWord": "audio-word-pt_br-copo",
+      "audioSyllable": "audio-syllable-pt_br-copo-co",
+      "tip": "co"
+    }
+  }
+}

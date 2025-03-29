@@ -1,0 +1,451 @@
+{
+  "animals": {
+    "cachorro": {
+      "name": "Cachorro",
+      "tip": "Ca",
+      "audioSyllable": "audio-syllable-pt_br-cachorro-ca.mp3",
+      "audioWord": "audio-word-pt_br-cachorro.mp3",
+      "images": [
+        "objeto-animal-cachorro-1.png",
+        "objeto-animal-cachorro-2.png",
+        "objeto-animal-cachorro-cartoon-1.png",
+        "objeto-animal-cachorro-cartoon-2.png",
+        "objeto-animal-cachorro-cartoon-3.png",
+        "objeto-animal-cachorro-cartoon-4.png"
+      ]
+    },
+    "passaro": {
+      "name": "Pássaro",
+      "tip": "Pá",
+      "audioSyllable": "audio-syllable-pt_br-passaro-pa.mp3",
+      "audioWord": "audio-word-pt_br-passaro.mp3",
+      "images": [
+        "objeto-animal-passaro-1.png",
+        "objeto-animal-passaro-2.png",
+        "objeto-animal-passaro-3.png",
+        "objeto-animal-passaro-cartoon-1.png",
+        "objeto-animal-passaro-cartoon-2.png"
+      ]
+    },
+    "coelho": {
+      "name": "Coelho",
+      "tip": "Co",
+      "audioSyllable": "audio-syllable-pt_br-coelho-co.mp3",
+      "audioWord": "audio-word-pt_br-coelho.mp3",
+      "images": [
+        "objeto-animal-coelho-1.png",
+        "objeto-animal-coelho-2.png"
+      ]
+    },
+    "peixe": {
+      "name": "Peixe",
+      "tip": "Pe",
+      "audioSyllable": "audio-syllable-pt_br-peixe-pe.mp3",
+      "audioWord": "audio-word-pt_br-peixe.mp3",
+      "images": [
+        "objeto-animal-peixe-1.png",
+        "objeto-animal-peixe-4.png"
+      ]
+    },
+    "gato": {
+      "name": "Gato",
+      "tip": "Ga",
+      "audioSyllable": "audio-syllable-pt_br-gato-ga.mp3",
+      "audioWord": "audio-word-pt_br-gato.mp3",
+      "images": [
+        "objeto-animal-gato-1.png"
+      ]
+    },
+    "ovelha": {
+      "name": "Ovelha",
+      "tip": "O",
+      "audioSyllable": "audio-syllable-pt_br-ovelha-o.mp3",
+      "audioWord": "audio-word-pt_br-ovelha.mp3",
+      "images": [
+        "objeto-animal-ovelha-1.png",
+        "objeto-animal-ovelha-2.png",
+        "objeto-animal-ovelha-3.png",
+        "objeto-animal-ovelha-cartoon-1.png",
+        "objeto-animal-ovelha-cartoon-2.png",
+        "objeto-animal-ovelha-cartoon-3.png",
+        "objeto-animal-ovelha-cartoon-4.png"
+      ]
+    },
+    "cavalo": {
+      "name": "Cavalo",
+      "tip": "Ca",
+      "audioSyllable": "audio-syllable-pt_br-cavalo-ca.mp3",
+      "audioWord": "audio-word-pt_br-cavalo.mp3",
+      "images": [
+        "objeto-animal-cavalo-1.png",
+        "objeto-animal-cavalo-2.png",
+        "objeto-animal-cavalo-3.png",
+        "objeto-animal-cavalo-4.png",
+        "objeto-animal-cavalo-cartoon-1.png",
+        "objeto-animal-cavalo-cartoon-2.png",
+        "objeto-animal-cavalo-cartoon-3.png",
+        "objeto-animal-cavalo-cartoon-4.png"
+      ]
+    },
+    "borboleta": {
+      "name": "Borboleta",
+      "tip": "Bo",
+      "audioSyllable": "audio-syllable-pt_br-borboleta-bo.mp3",
+      "audioWord": "audio-word-pt_br-borboleta.mp3",
+      "images": [
+        "objeto-animal-borboleta-1.png",
+        "objeto-animal-borboleta-2.png",
+        "objeto-animal-borboleta-3.png",
+        "objeto-animal-borboleta-4.png",
+        "objeto-animal-borboleta-cartoon-1.png",
+        "objeto-animal-borboleta-cartoon-2.png",
+        "objeto-animal-borboleta-cartoon-3.png",
+        "objeto-animal-borboleta-cartoon-4.png"
+      ]
+    },
+    "porco": {
+      "name": "Porco",
+      "tip": "Po",
+      "audioSyllable": "audio-syllable-pt_br-porco-po.mp3",
+      "audioWord": "audio-word-pt_br-porco.mp3",
+      "images": [
+        "objeto-animal-porco-1.png",
+        "objeto-animal-porco-2.png",
+        "objeto-animal-porco-3.png",
+        "objeto-animal-porco-4.png",
+        "objeto-animal-porco-cartoon-1.png",
+        "objeto-animal-porco-cartoon-2.png",
+        "objeto-animal-porco-cartoon-3.png"
+      ]
+    },
+    "galinha": {
+      "name": "Galinha",
+      "tip": "Ga",
+      "audioSyllable": "audio-syllable-pt_br-galinha-ga.mp3",
+      "audioWord": "audio-word-pt_br-galinha.mp3",
+      "images": [
+        "objeto-animal-galinha-1.png",
+        "objeto-animal-galinha-2.png",
+        "objeto-animal-galinha-3.png"
+      ]
+    },
+    "vaca": {
+      "name": "Vaca",
+      "tip": "Va",
+      "audioSyllable": "audio-syllable-pt_br-vaca-va.mp3",
+      "audioWord": "audio-word-pt_br-vaca.mp3",
+      "images": [
+        "objeto-animal-vaca-1.png",
+        "objeto-animal-vaca-2.png",
+        "objeto-animal-vaca-3.png",
+        "objeto-animal-vaca-4.png",
+        "objeto-animal-vaca-cartoon-1.png",
+        "objeto-animal-vaca-cartoon-2.png",
+        "objeto-animal-vaca-cartoon-3.png",
+        "objeto-animal-vaca-cartoon-4.png"
+      ]
+    },
+    "abelha": {
+      "name": "Abelha",
+      "tip": "Ab",
+      "audioSyllable": "audio-syllable-pt_br-abelha-ab.mp3",
+      "audioWord": "audio-word-pt_br-abelha.mp3",
+      "images": [
+        "objeto-animal-abelha-1.png",
+        "objeto-animal-abelha-2.png",
+        "objeto-animal-abelha-3.png",
+        "objeto-animal-abelha-4.png",
+        "objeto-animal-abelha-cartoon-1.png",
+        "objeto-animal-abelha-cartoon-2.png",
+        "objeto-animal-abelha-cartoon-3.png",
+        "objeto-animal-abelha-cartoon-4.png"
+      ]
+    }
+  },
+  "flowers": {
+    "tulipa": {
+      "name": "Tulipa",
+      "tip": "Tu",
+      "audioSyllable": "audio-syllable-pt_br-tulipa-tu.mp3",
+      "audioWord": "audio-word-pt_br-tulipa.mp3",
+      "images": [
+        "objeto-flor-tulipa-1.png",
+        "objeto-flor-tulipa-2.png",
+        "objeto-flor-tulipa-3.png",
+        "objeto-flor-tulipa-4.png",
+        "objeto-flor-tulipa-cartoon-1.png",
+        "objeto-flor-tulipa-cartoon-2.png",
+        "objeto-flor-tulipa-cartoon-3.png",
+        "objeto-flor-tulipa-cartoon-4.png"
+      ]
+    },
+    "rosa": {
+      "name": "Rosa",
+      "tip": "Ro",
+      "audioSyllable": "audio-syllable-pt_br-rosa-ro.mp3",
+      "audioWord": "audio-word-pt_br-rosa.mp3",
+      "images": [
+        "objeto-flor-rosa-1.png",
+        "objeto-flor-rosa-2.png",
+        "objeto-flor-rosa-3.png",
+        "objeto-flor-rosa-4.png",
+        "objeto-flor-rosa-cartoon-1.png",
+        "objeto-flor-rosa-cartoon-2.png",
+        "objeto-flor-rosa-cartoon-3.png",
+        "objeto-flor-rosa-cartoon-4.png"
+      ]
+    },
+    "girassol": {
+      "name": "Girassol",
+      "tip": "Gi",
+      "audioSyllable": "audio-syllable-pt_br-girassol-gi.mp3",
+      "audioWord": "audio-word-pt_br-girassol.mp3",
+      "images": [
+        "objeto-flor-girassol-1.png",
+        "objeto-flor-girassol-2.png",
+        "objeto-flor-girassol-3.png",
+        "objeto-flor-girassol-cartoon-1.png",
+        "objeto-flor-girassol-cartoon-2.png",
+        "objeto-flor-girassol-cartoon-3.png"
+      ]
+    }
+  },
+  "fruits": {
+    "maca": {
+      "name": "Maçã",
+      "tip": "Má",
+      "audioSyllable": "audio-syllable-pt_br-maca-ma.mp3",
+      "audioWord": "audio-word-pt_br-maca.mp3",
+      "images": [
+        "objeto-fruta-maca.png",
+        "objeto-fruta-maca-2.png",
+        "objeto-fruta-maca-3.png",
+        "objeto-fruta-maca-4.png",
+        "objeto-fruta-maca-5.png"
+      ]
+    },
+    "banana": {
+      "name": "Banana",
+      "tip": "Ba",
+      "audioSyllable": "audio-syllable-pt_br-banana-ba.mp3",
+      "audioWord": "audio-word-pt_br-banana.mp3",
+      "images": [
+        "objeto-fruta-banana-cartoon-1.png"
+      ]
+    },
+    "laranja": {
+      "name": "Laranja",
+      "tip": "La",
+      "audioSyllable": "audio-syllable-pt_br-laranja-la.mp3",
+      "audioWord": "audio-word-pt_br-laranja.mp3",
+      "images": [
+        "objeto-fruta-laranja-1.png",
+        "objeto-fruta-laranja-2.png",
+        "objeto-fruta-laranja-3.png",
+        "objeto-fruta-laranja-4.png",
+        "objeto-fruta-laranja-cartoon-1.png",
+        "objeto-fruta-laranja-cartoon-2.png"
+      ]
+    },
+    "uvas": {
+      "name": "Uvas",
+      "tip": "U",
+      "audioSyllable": "audio-syllable-pt_br-uvas-u.mp3",
+      "audioWord": "audio-word-pt_br-uvas.mp3",
+      "images": [
+        "objeto-fruta-uvas-cartoon-2.png",
+        "objeto-fruta-uvas-cartoon-3.png"
+      ]
+    },
+    "morango": {
+      "name": "Morango",
+      "tip": "Mo",
+      "audioSyllable": "audio-syllable-pt_br-morango-mo.mp3",
+      "audioWord": "audio-word-pt_br-morango.mp3",
+      "images": [
+        "objeto-fruta-morango-1.png",
+        "objeto-fruta-morango-2.png"
+      ]
+    }
+  },
+  "sky": {
+    "lua": {
+      "name": "Lua",
+      "tip": "Lu",
+      "audioSyllable": "audio-syllable-pt_br-lua-lu.mp3",
+      "audioWord": "audio-word-pt_br-lua.mp3",
+      "images": [
+        "objeto-ceu-lua-1.png",
+        "objeto-ceu-lua-2.png",
+        "objeto-ceu-lua-3.png",
+        "objeto-ceu-lua-4.png",
+        "objeto-ceu-lua-cartoon-1.png",
+        "objeto-ceu-lua-cartoon-2.png",
+        "objeto-ceu-lua-cartoon-3.png",
+        "objeto-ceu-lua-cartoon-4.png"
+      ]
+    }
+  },
+  "furniture": {
+    "sofa": {
+      "name": "Sofá",
+      "tip": "So",
+      "audioSyllable": "audio-syllable-pt_br-sofa-so.mp3",
+      "audioWord": "audio-word-pt_br-sofa.mp3",
+      "images": [
+        "objeto-movel-sofa-1.png",
+        "objeto-movel-sofa-2.png"
+      ]
+    },
+    "cama": {
+      "name": "Cama",
+      "tip": "Ca",
+      "audioSyllable": "audio-syllable-pt_br-cama-ca.mp3",
+      "audioWord": "audio-word-pt_br-cama.mp3",
+      "images": [
+        "objeto-movel-cama-1.png"
+      ]
+    },
+    "mesa": {
+      "name": "Mesa",
+      "tip": "Me",
+      "audioSyllable": "audio-syllable-pt_br-mesa-me.mp3",
+      "audioWord": "audio-word-pt_br-mesa.mp3",
+      "images": [
+        "objeto-movel-mesa-1.png",
+        "objeto-movel-mesa-2.png",
+        "objeto-movel-mesa-3.png"
+      ]
+    }
+  },
+  "food": {
+    "batata": {
+      "name": "Batata",
+      "tip": "Ba",
+      "audioSyllable": "audio-syllable-pt_br-batata-ba.mp3",
+      "audioWord": "audio-word-pt_br-batata.mp3",
+      "images": [
+        "objeto-alimento-batata-1.png",
+        "objeto-alimento-batata-cartoon-1.png"
+      ]
+    }
+  },
+  "kitchen": {
+    "prato": {
+      "name": "Prato",
+      "tip": "Pr",
+      "audioSyllable": "audio-syllable-pt_br-prato-pr.mp3",
+      "audioWord": "audio-word-pt_br-prato.mp3",
+      "images": [
+        "objeto-cozinha-prato-4.png",
+        "objeto-cozinha-prato-5.png",
+        "objeto-cozinha-prato-6.png",
+        "objeto-cozinha-prato-7.png"
+      ]
+    }
+  },
+  "utensils": {
+    "garfo": {
+      "name": "Garfo",
+      "tip": "Ga",
+      "audioSyllable": "audio-syllable-pt_br-garfo-ga.mp3",
+      "audioWord": "audio-word-pt_br-garfo.mp3",
+      "images": [
+        "objeto-talher-garfo-1.png",
+        "objeto-talher-garfo-2.png",
+        "objeto-talher-garfo-3.png"
+      ]
+    },
+    "colher": {
+      "name": "Colher",
+      "tip": "Co",
+      "audioSyllable": "audio-syllable-pt_br-colher-co.mp3",
+      "audioWord": "audio-word-pt_br-colher.mp3",
+      "images": [
+        "objeto-talher-colher-1.png",
+        "objeto-talher-colher-2.png",
+        "objeto-talher-colher-3.png",
+        "objeto-talher-colher-4.png",
+        "objeto-talher-colher-5.png",
+        "objeto-talher-colher-6.png",
+        "objeto-talher-colher-7.png"
+      ]
+    }
+  },
+  "instruments": {
+    "violao": {
+      "name": "Violão",
+      "tip": "Vi",
+      "audioSyllable": "audio-syllable-pt_br-violao-vi.mp3",
+      "audioWord": "audio-word-pt_br-violao.mp3",
+      "images": [
+        "objeto-instrumento-violao-1.png",
+        "objeto-instrumento-violao-2.png",
+        "objeto-instrumento-violao-3.png",
+        "objeto-instrumento-violao-4.png",
+        "objeto-instrumento-violao-cartoon-1.png"
+      ]
+    },
+    "piano": {
+      "name": "Piano",
+      "tip": "Pi",
+      "audioSyllable": "audio-syllable-pt_br-piano-pi.mp3",
+      "audioWord": "audio-word-pt_br-piano.mp3",
+      "images": [
+        "objeto-instrumento-piano-1.png",
+        "objeto-instrumento-piano-2.png",
+        "objeto-instrumento-piano-3.png",
+        "objeto-instrumento-piano-4.png",
+        "objeto-instrumento-piano-cartoon-1.png",
+        "objeto-instrumento-piano-cartoon-2.png",
+        "objeto-instrumento-piano-cartoon-3.png",
+        "objeto-instrumento-piano-cartoon-4.png"
+      ]
+    },
+    "violino": {
+      "name": "Violino",
+      "tip": "Vi",
+      "audioSyllable": "audio-syllable-pt_br-violino-vi.mp3",
+      "audioWord": "audio-word-pt_br-violino.mp3",
+      "images": [
+        "objeto-instrumento-violino-1.png",
+        "objeto-instrumento-violino-2.png",
+        "objeto-instrumento-violino-3.png",
+        "objeto-instrumento-violino-4.png",
+        "objeto-instrumento-violino-cartoon-1.png",
+        "objeto-instrumento-violino-cartoon-2.png",
+        "objeto-instrumento-violino-cartoon-3.png",
+        "objeto-instrumento-violino-cartoon-4.png"
+      ]
+    },
+    "bateria": {
+      "name": "Bateria",
+      "tip": "Ba",
+      "audioSyllable": "audio-syllable-pt_br-bateria-ba.mp3",
+      "audioWord": "audio-word-pt_br-bateria.mp3",
+      "images": [
+        "objeto-instrumento-bateria-1.png",
+        "objeto-instrumento-bateria-cartoon-1.png",
+        "objeto-instrumento-bateria-cartoon-2.png",
+        "objeto-instrumento-bateria-cartoon-3.png",
+        "objeto-instrumento-bateria-cartoon-4.png"
+      ]
+    },
+    "saxofone": {
+      "name": "Saxofone",
+      "tip": "Sa",
+      "audioSyllable": "audio-syllable-pt_br-saxofone-sa.mp3",
+      "audioWord": "audio-word-pt_br-saxofone.mp3",
+      "images": [
+        "objeto-instrumento-saxofone-1.png",
+        "objeto-instrumento-saxofone-2.png",
+        "objeto-instrumento-saxofone-3.png",
+        "objeto-instrumento-saxofone-4.png",
+        "objeto-instrumento-saxofone-cartoon-1.png",
+        "objeto-instrumento-saxofone-cartoon-2.png",
+        "objeto-instrumento-saxofone-cartoon-3.png",
+        "objeto-instrumento-saxofone-cartoon-4.png"
+      ]
+    }
+  }
+} 

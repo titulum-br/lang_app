@@ -1,0 +1,126 @@
+{
+    "output_prefix": "generated_image",
+    "prompts": [
+        {
+          "filename": "objeto-eletronico-telefone",
+          "prompt": "A detailed, realistic photograph of a modern smartphone resting on a table, showcasing its sleek design, vibrant display, and natural reflections on a clean background.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-metalico-chave",
+          "prompt": "A detailed, realistic photograph of a shiny metal key with intricate engravings, set on a plain, softly lit background.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-vidro-copo",
+          "prompt": "A detailed, realistic photograph of a transparent glass cup with water droplets and natural reflections, placed on a minimalistic surface.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-acessorio-relogio",
+          "prompt": "A detailed, realistic photograph of a classic wristwatch with a leather band and intricate dial details, captured in natural light against a plain background.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-educativo-livro",
+          "prompt": "A detailed, realistic photograph of an open book showing visible text and rich paper textures, set on a wooden table with natural lighting.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-container-garrafa",
+          "prompt": "A detailed, realistic photograph of a glass bottle containing colored liquid, with subtle reflections and fine textures, displayed on a neutral background.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-iluminacao-lampada",
+          "prompt": "A detailed, realistic photograph of a modern LED lamp with a sleek design and soft ambient glow, captured in a well-lit interior.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-papelaria-caderno",
+          "prompt": "A detailed, realistic photograph of a spiral-bound notebook with crisp white pages and a clean cover design, placed on a simple surface with soft lighting.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-escrita-caneta",
+          "prompt": "A detailed, realistic photograph of a stylish ballpoint pen with smooth contours and a metallic finish, set on a plain background with soft natural light.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-moveis-mesa",
+          "prompt": "A detailed, realistic photograph of a wooden dining table showcasing natural grain texture and soft ambient lighting in a modern setting.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-moveis-cadeira",
+          "prompt": "A detailed, realistic photograph of a comfortable office chair with ergonomic design and subtle fabric textures, captured in natural light.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-eletronico-computador",
+          "prompt": "A detailed, realistic photograph of a modern desktop computer setup with a sleek monitor, keyboard, and mouse in a well-lit workspace.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-utensilio-tesoura",
+          "prompt": "A detailed, realistic photograph of a pair of sharp scissors with polished metal blades and ergonomic handles, placed on a neutral background.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-acessorio-oculos",
+          "prompt": "A detailed, realistic photograph of stylish eyeglasses with clear lenses and a modern frame design, set against a plain backdrop.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-acessorio-bolsa",
+          "prompt": "A detailed, realistic photograph of a leather handbag with intricate stitching and refined texture, placed on a minimalistic background.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-calcado-sapato",
+          "prompt": "A detailed, realistic photograph of a pair of elegant leather shoes with fine detailing and natural shadows, set on a simple surface.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-moveis-almofada",
+          "prompt": "A detailed, realistic photograph of a plush cushion with soft fabric texture and inviting colors, captured in a cozy interior setting.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-eletrodomestico-geladeira",
+          "prompt": "A detailed, realistic photograph of a modern refrigerator with a sleek finish and subtle reflections, displayed in a bright kitchen setting.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-eletrodomestico-microondas",
+          "prompt": "A detailed, realistic photograph of a compact microwave oven with a digital display and modern design, placed on a kitchen counter with soft lighting.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        },
+        {
+          "filename": "objeto-banheiro-chuveiro",
+          "prompt": "A detailed, realistic photograph of a contemporary shower head with clear water droplets and natural reflections, set in a modern, bright bathroom.",
+          "negative_prompt": "text, watermark, ugly",
+          "tries": 4
+        }
+      ]
+      
+} 

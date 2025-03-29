@@ -15,7 +15,7 @@ if (!API_KEY) {
 const BASE_URL = 'https://api.elevenlabs.io/v1';
 const NUM_SAMPLES = 3; // Number of variations to generate for each audio
 const OUTPUT_DIR = path.join(__dirname, '../assets/audio');
-const FLASHCARDS_PATH = path.join(__dirname, '../assets/images/flashcards.json');
+const FLASHCARDS_PATH = path.join(__dirname, 'flashcards_base.json');
 const VOICE_ID = process.env.ELEVENLABS_VOICE_ID || process.env.ELEVEN_LABS_VOICE_ID || 'UQ3s9h7N3CVJBL2USizn'; // Klaus voice ID
 const MODEL_ID = 'eleven_multilingual_v2';
 const OUTPUT_FORMAT = 'mp3_44100_128';
@@ -24,6 +24,7 @@ const OUTPUT_FORMAT = 'mp3_44100_128';
 const args = process.argv.slice(2);
 const TEST_MODE = args.includes('--test');
 const LIMIT_ARG = args.find(arg => arg.startsWith('--limit='));
+const FORCE_ARG = args.includes('--force');
 const FILE_LIMIT = LIMIT_ARG ? parseInt(LIMIT_ARG.split('=')[1], 10) : (TEST_MODE ? 10 : 0);
 
 // Make sure output directory exists
@@ -105,23 +106,38 @@ async function verifyCredentials() {
   }
 }
 
-// Function to extract all syllables and words from flashcards.json
+// Function to extract all syllables and words from flashcards_base.json
 function extractTipsFromFlashcards() {
   const flashcardsData = JSON.parse(fs.readFileSync(FLASHCARDS_PATH, 'utf8'));
   const syllables = new Set();
   const words = new Set();
   
   // Loop through all categories and items
-  Object.values(flashcardsData).forEach(category => {
-    Object.entries(category).forEach(([key, item]) => {
-      if (item.tip) {
+  Object.entries(flashcardsData).forEach(([category, items]) => {
+    Object.entries(items).forEach(([key, item]) => {
+      // If tip is not present or is null, we need to generate it
+      if (!item.tip || item.tip === null) {
+        // Simple rule: use first syllable (first two characters of the word)
+        const generatedTip = key.slice(0, 2);
+        // Update the item with the generated tip
+        item.tip = generatedTip;
+        item.audioSyllable = `audio-syllable-pt_br-${key}-${generatedTip}`;
+        
+        // Save the generated tip for audio generation
+        syllables.add({ word: key, syllable: generatedTip.toLowerCase() });
+      } else {
         syllables.add({ word: key, syllable: item.tip.toLowerCase() });
       }
+      
+      // Always check for word audio
       if (item.name) {
         words.add({ key, word: item.name });
       }
     });
   });
+  
+  // Save the updated flashcards_base.json with added tips
+  fs.writeFileSync(FLASHCARDS_PATH, JSON.stringify(flashcardsData, null, 2));
   
   return {
     syllables: Array.from(syllables),
@@ -206,6 +222,11 @@ async function generateAudio(text, outputPath, stability = 0.5, similarity_boost
   }
 }
 
+// Function to check if an audio file already exists
+function audioFileExists(outputPath) {
+  return fs.existsSync(outputPath);
+}
+
 // Main function to generate all audio files
 async function generateAllAudioFiles() {
   // First verify the API key and voice ID
@@ -215,7 +236,7 @@ async function generateAllAudioFiles() {
     return;
   }
   
-  console.log('Extracting tips from flashcards.json...');
+  console.log('Extracting tips from flashcards_base.json...');
   const { syllables, words } = extractTipsFromFlashcards();
   
   console.log(`Found ${syllables.length} syllables and ${words.length} words to generate`);
@@ -231,6 +252,13 @@ async function generateAllAudioFiles() {
         OUTPUT_DIR,
         `audio-syllable-pt_br-${word}-${syllable}-klaus-${i}.mp3`
       );
+      
+      // Skip if file already exists and we're not forcing regeneration
+      if (!FORCE_ARG && audioFileExists(outputPath)) {
+        console.log(`Skipping existing file: ${outputPath}`);
+        continue;
+      }
+      
       tasks.push({ text: syllable, outputPath, type: 'syllable' });
     }
   }
@@ -242,60 +270,54 @@ async function generateAllAudioFiles() {
         OUTPUT_DIR,
         `audio-word-pt_br-${key}-klaus-${i}.mp3`
       );
+      
+      // Skip if file already exists and we're not forcing regeneration
+      if (!FORCE_ARG && audioFileExists(outputPath)) {
+        console.log(`Skipping existing file: ${outputPath}`);
+        continue;
+      }
+      
       tasks.push({ text: word, outputPath, type: 'word' });
     }
   }
   
-  console.log(`Total tasks: ${tasks.length} audio files`);
+  console.log(`Total new tasks: ${tasks.length} audio files`);
   
-  // Apply file limit if specified
-  const processedTasks = FILE_LIMIT > 0 ? tasks.slice(0, FILE_LIMIT) : tasks;
-  
-  if (FILE_LIMIT > 0) {
-    console.log(`LIMIT MODE: Will only generate ${processedTasks.length} audio files`);
+  // Apply file limit for testing
+  if (FILE_LIMIT > 0 && tasks.length > FILE_LIMIT) {
+    console.log(`Limiting to ${FILE_LIMIT} files due to --limit option`);
+    tasks.splice(FILE_LIMIT);
   }
   
-  // Uncomment the following if you want to run in test mode with only 10 files
-  // const processedTasks = tasks.slice(0, 10);
-  // console.log(`TESTING MODE: Will only generate 10 audio files`);
+  // Process all tasks
+  let successCount = 0;
+  let failureCount = 0;
   
-  // Or use all tasks for full generation
-  // const processedTasks = tasks;
-  
-  // Process tasks with some parallelism (but not too much to avoid rate limits)
-  const BATCH_SIZE = 2; // Reduced batch size to avoid rate limits
-  for (let i = 0; i < processedTasks.length; i += BATCH_SIZE) {
-    const batch = processedTasks.slice(i, i + BATCH_SIZE);
+  for (let i = 0; i < tasks.length; i++) {
+    const { text, outputPath, type } = tasks[i];
+    console.log(`Processing task ${i + 1}/${tasks.length}: ${type} "${text}"`);
     
-    console.log(`Processing batch ${Math.ceil((i + 1) / BATCH_SIZE)} of ${Math.ceil(processedTasks.length / BATCH_SIZE)}`);
-    
-    // Process batch in parallel
-    const results = await Promise.all(
-      batch.map(task => 
-        generateAudio(
-          task.text, 
-          task.outputPath, 
-          task.type === 'syllable' ? 0.6 : 0.4,  // Different stability for syllables vs words
-          task.type === 'syllable' ? 0.7 : 0.5   // Different similarity boost for syllables vs words
-        )
-      )
-    );
-    
-    // Count successful generations in this batch
-    const successCount = results.filter(r => r).length;
-    console.log(`Completed batch ${Math.ceil((i + 1) / BATCH_SIZE)}: ${successCount}/${batch.length} succeeded`);
-    
-    // Add a longer delay between batches to respect rate limits
-    const delayTime = 2000; // 2 seconds between batches
-    console.log(`Waiting ${delayTime/1000} seconds before next batch to avoid rate limits...`);
-    await new Promise(resolve => setTimeout(resolve, delayTime));
+    const success = await generateAudio(text, outputPath);
+    if (success) {
+      successCount++;
+    } else {
+      failureCount++;
+    }
   }
   
-  console.log('Audio generation completed!');
+  // Final report
+  console.log('\nAudio generation completed:');
+  console.log(`- Total files processed: ${tasks.length}`);
+  console.log(`- Successfully generated: ${successCount}`);
+  console.log(`- Failed: ${failureCount}`);
+  
+  if (failureCount > 0) {
+    console.log('Some files failed to generate. Check the logs above for details.');
+    process.exit(1);
+  } else {
+    console.log('All audio files were generated successfully!');
+  }
 }
 
-// Execute the main function
-generateAllAudioFiles().catch(error => {
-  console.error('Error in audio generation process:', error);
-  process.exit(1);
-}); 
+// Run the main function
+generateAllAudioFiles(); 

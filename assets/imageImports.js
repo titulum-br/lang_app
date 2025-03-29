@@ -12,6 +12,18 @@
 // This allows us to statically import image files at build time
 
 const imageMap = {
+  'objeto-acessorio-bolsa-1.png': require('./images/objeto-acessorio-bolsa-1.png'),
+  'objeto-acessorio-bolsa-2.png': require('./images/objeto-acessorio-bolsa-2.png'),
+  'objeto-acessorio-bolsa-3.png': require('./images/objeto-acessorio-bolsa-3.png'),
+  'objeto-acessorio-bolsa-4.png': require('./images/objeto-acessorio-bolsa-4.png'),
+  'objeto-acessorio-oculos-1.png': require('./images/objeto-acessorio-oculos-1.png'),
+  'objeto-acessorio-oculos-2.png': require('./images/objeto-acessorio-oculos-2.png'),
+  'objeto-acessorio-oculos-3.png': require('./images/objeto-acessorio-oculos-3.png'),
+  'objeto-acessorio-oculos-4.png': require('./images/objeto-acessorio-oculos-4.png'),
+  'objeto-acessorio-relogio-1.png': require('./images/objeto-acessorio-relogio-1.png'),
+  'objeto-acessorio-relogio-2.png': require('./images/objeto-acessorio-relogio-2.png'),
+  'objeto-acessorio-relogio-3.png': require('./images/objeto-acessorio-relogio-3.png'),
+  'objeto-acessorio-relogio-4.png': require('./images/objeto-acessorio-relogio-4.png'),
   'objeto-alimento-batata-1.png': require('./images/objeto-alimento-batata-1.png'),
   'objeto-alimento-batata-cartoon-1.png': require('./images/objeto-alimento-batata-cartoon-1.png'),
   'objeto-animal-abelha-1.png': require('./images/objeto-animal-abelha-1.png'),
@@ -79,6 +91,14 @@ const imageMap = {
   'objeto-animal-vaca-cartoon-2.png': require('./images/objeto-animal-vaca-cartoon-2.png'),
   'objeto-animal-vaca-cartoon-3.png': require('./images/objeto-animal-vaca-cartoon-3.png'),
   'objeto-animal-vaca-cartoon-4.png': require('./images/objeto-animal-vaca-cartoon-4.png'),
+  'objeto-banheiro-chuveiro-1.png': require('./images/objeto-banheiro-chuveiro-1.png'),
+  'objeto-banheiro-chuveiro-2.png': require('./images/objeto-banheiro-chuveiro-2.png'),
+  'objeto-banheiro-chuveiro-3.png': require('./images/objeto-banheiro-chuveiro-3.png'),
+  'objeto-banheiro-chuveiro-4.png': require('./images/objeto-banheiro-chuveiro-4.png'),
+  'objeto-calcado-sapato-1.png': require('./images/objeto-calcado-sapato-1.png'),
+  'objeto-calcado-sapato-2.png': require('./images/objeto-calcado-sapato-2.png'),
+  'objeto-calcado-sapato-3.png': require('./images/objeto-calcado-sapato-3.png'),
+  'objeto-calcado-sapato-4.png': require('./images/objeto-calcado-sapato-4.png'),
   'objeto-ceu-lua-1.png': require('./images/objeto-ceu-lua-1.png'),
   'objeto-ceu-lua-2.png': require('./images/objeto-ceu-lua-2.png'),
   'objeto-ceu-lua-3.png': require('./images/objeto-ceu-lua-3.png'),
@@ -86,10 +106,38 @@ const imageMap = {
   'objeto-ceu-lua-cartoon-1.png': require('./images/objeto-ceu-lua-cartoon-1.png'),
   'objeto-ceu-lua-cartoon-2.png': require('./images/objeto-ceu-lua-cartoon-2.png'),
   'objeto-ceu-lua-cartoon-4.png': require('./images/objeto-ceu-lua-cartoon-4.png'),
+  'objeto-container-garrafa-1.png': require('./images/objeto-container-garrafa-1.png'),
+  'objeto-container-garrafa-2.png': require('./images/objeto-container-garrafa-2.png'),
+  'objeto-container-garrafa-3.png': require('./images/objeto-container-garrafa-3.png'),
+  'objeto-container-garrafa-4.png': require('./images/objeto-container-garrafa-4.png'),
   'objeto-cozinha-prato-4.png': require('./images/objeto-cozinha-prato-4.png'),
   'objeto-cozinha-prato-5.png': require('./images/objeto-cozinha-prato-5.png'),
   'objeto-cozinha-prato-6.png': require('./images/objeto-cozinha-prato-6.png'),
   'objeto-cozinha-prato-7.png': require('./images/objeto-cozinha-prato-7.png'),
+  'objeto-educativo-livro-1.png': require('./images/objeto-educativo-livro-1.png'),
+  'objeto-educativo-livro-2.png': require('./images/objeto-educativo-livro-2.png'),
+  'objeto-educativo-livro-3.png': require('./images/objeto-educativo-livro-3.png'),
+  'objeto-educativo-livro-4.png': require('./images/objeto-educativo-livro-4.png'),
+  'objeto-eletrodomestico-geladeira-1.png': require('./images/objeto-eletrodomestico-geladeira-1.png'),
+  'objeto-eletrodomestico-geladeira-2.png': require('./images/objeto-eletrodomestico-geladeira-2.png'),
+  'objeto-eletrodomestico-geladeira-3.png': require('./images/objeto-eletrodomestico-geladeira-3.png'),
+  'objeto-eletrodomestico-geladeira-4.png': require('./images/objeto-eletrodomestico-geladeira-4.png'),
+  'objeto-eletrodomestico-microondas-1.png': require('./images/objeto-eletrodomestico-microondas-1.png'),
+  'objeto-eletrodomestico-microondas-2.png': require('./images/objeto-eletrodomestico-microondas-2.png'),
+  'objeto-eletrodomestico-microondas-3.png': require('./images/objeto-eletrodomestico-microondas-3.png'),
+  'objeto-eletrodomestico-microondas-4.png': require('./images/objeto-eletrodomestico-microondas-4.png'),
+  'objeto-eletronico-computador-1.png': require('./images/objeto-eletronico-computador-1.png'),
+  'objeto-eletronico-computador-2.png': require('./images/objeto-eletronico-computador-2.png'),
+  'objeto-eletronico-computador-3.png': require('./images/objeto-eletronico-computador-3.png'),
+  'objeto-eletronico-computador-4.png': require('./images/objeto-eletronico-computador-4.png'),
+  'objeto-eletronico-telefone-1.png': require('./images/objeto-eletronico-telefone-1.png'),
+  'objeto-eletronico-telefone-2.png': require('./images/objeto-eletronico-telefone-2.png'),
+  'objeto-eletronico-telefone-3.png': require('./images/objeto-eletronico-telefone-3.png'),
+  'objeto-eletronico-telefone-4.png': require('./images/objeto-eletronico-telefone-4.png'),
+  'objeto-escrita-caneta-1.png': require('./images/objeto-escrita-caneta-1.png'),
+  'objeto-escrita-caneta-2.png': require('./images/objeto-escrita-caneta-2.png'),
+  'objeto-escrita-caneta-3.png': require('./images/objeto-escrita-caneta-3.png'),
+  'objeto-escrita-caneta-4.png': require('./images/objeto-escrita-caneta-4.png'),
   'objeto-flor-girassol-1.png': require('./images/objeto-flor-girassol-1.png'),
   'objeto-flor-girassol-2.png': require('./images/objeto-flor-girassol-2.png'),
   'objeto-flor-girassol-3.png': require('./images/objeto-flor-girassol-3.png'),
@@ -128,6 +176,10 @@ const imageMap = {
   'objeto-fruta-morango-2.png': require('./images/objeto-fruta-morango-2.png'),
   'objeto-fruta-uvas-cartoon-2.png': require('./images/objeto-fruta-uvas-cartoon-2.png'),
   'objeto-fruta-uvas-cartoon-3.png': require('./images/objeto-fruta-uvas-cartoon-3.png'),
+  'objeto-iluminacao-lampada-1.png': require('./images/objeto-iluminacao-lampada-1.png'),
+  'objeto-iluminacao-lampada-2.png': require('./images/objeto-iluminacao-lampada-2.png'),
+  'objeto-iluminacao-lampada-3.png': require('./images/objeto-iluminacao-lampada-3.png'),
+  'objeto-iluminacao-lampada-4.png': require('./images/objeto-iluminacao-lampada-4.png'),
   'objeto-instrumento-bateria-1.png': require('./images/objeto-instrumento-bateria-1.png'),
   'objeto-instrumento-bateria-cartoon-1.png': require('./images/objeto-instrumento-bateria-cartoon-1.png'),
   'objeto-instrumento-bateria-cartoon-2.png': require('./images/objeto-instrumento-bateria-cartoon-2.png'),
@@ -162,12 +214,32 @@ const imageMap = {
   'objeto-instrumento-violino-cartoon-2.png': require('./images/objeto-instrumento-violino-cartoon-2.png'),
   'objeto-instrumento-violino-cartoon-3.png': require('./images/objeto-instrumento-violino-cartoon-3.png'),
   'objeto-instrumento-violino-cartoon-4.png': require('./images/objeto-instrumento-violino-cartoon-4.png'),
+  'objeto-metalico-chave-1.png': require('./images/objeto-metalico-chave-1.png'),
+  'objeto-metalico-chave-2.png': require('./images/objeto-metalico-chave-2.png'),
+  'objeto-metalico-chave-3.png': require('./images/objeto-metalico-chave-3.png'),
+  'objeto-metalico-chave-4.png': require('./images/objeto-metalico-chave-4.png'),
+  'objeto-moveis-almofada-1.png': require('./images/objeto-moveis-almofada-1.png'),
+  'objeto-moveis-almofada-2.png': require('./images/objeto-moveis-almofada-2.png'),
+  'objeto-moveis-almofada-3.png': require('./images/objeto-moveis-almofada-3.png'),
+  'objeto-moveis-almofada-4.png': require('./images/objeto-moveis-almofada-4.png'),
+  'objeto-moveis-cadeira-1.png': require('./images/objeto-moveis-cadeira-1.png'),
+  'objeto-moveis-cadeira-2.png': require('./images/objeto-moveis-cadeira-2.png'),
+  'objeto-moveis-cadeira-3.png': require('./images/objeto-moveis-cadeira-3.png'),
+  'objeto-moveis-cadeira-4.png': require('./images/objeto-moveis-cadeira-4.png'),
+  'objeto-moveis-mesa-1.png': require('./images/objeto-moveis-mesa-1.png'),
+  'objeto-moveis-mesa-2.png': require('./images/objeto-moveis-mesa-2.png'),
+  'objeto-moveis-mesa-3.png': require('./images/objeto-moveis-mesa-3.png'),
+  'objeto-moveis-mesa-4.png': require('./images/objeto-moveis-mesa-4.png'),
   'objeto-movel-cama-1.png': require('./images/objeto-movel-cama-1.png'),
   'objeto-movel-mesa-1.png': require('./images/objeto-movel-mesa-1.png'),
   'objeto-movel-mesa-2.png': require('./images/objeto-movel-mesa-2.png'),
   'objeto-movel-mesa-3.png': require('./images/objeto-movel-mesa-3.png'),
   'objeto-movel-sofa-1.png': require('./images/objeto-movel-sofa-1.png'),
   'objeto-movel-sofa-2.png': require('./images/objeto-movel-sofa-2.png'),
+  'objeto-papelaria-caderno-1.png': require('./images/objeto-papelaria-caderno-1.png'),
+  'objeto-papelaria-caderno-2.png': require('./images/objeto-papelaria-caderno-2.png'),
+  'objeto-papelaria-caderno-3.png': require('./images/objeto-papelaria-caderno-3.png'),
+  'objeto-papelaria-caderno-4.png': require('./images/objeto-papelaria-caderno-4.png'),
   'objeto-talher-colher-1.png': require('./images/objeto-talher-colher-1.png'),
   'objeto-talher-colher-2.png': require('./images/objeto-talher-colher-2.png'),
   'objeto-talher-colher-3.png': require('./images/objeto-talher-colher-3.png'),
@@ -176,11 +248,37 @@ const imageMap = {
   'objeto-talher-colher-6.png': require('./images/objeto-talher-colher-6.png'),
   'objeto-talher-colher-7.png': require('./images/objeto-talher-colher-7.png'),
   'objeto-talher-garfo-1.png': require('./images/objeto-talher-garfo-1.png'),
-  'objeto-talher-garfo-3.png': require('./images/objeto-talher-garfo-3.png')
+  'objeto-talher-garfo-3.png': require('./images/objeto-talher-garfo-3.png'),
+  'objeto-utensilio-tesoura-1.png': require('./images/objeto-utensilio-tesoura-1.png'),
+  'objeto-utensilio-tesoura-2.png': require('./images/objeto-utensilio-tesoura-2.png'),
+  'objeto-utensilio-tesoura-3.png': require('./images/objeto-utensilio-tesoura-3.png'),
+  'objeto-utensilio-tesoura-4.png': require('./images/objeto-utensilio-tesoura-4.png'),
+  'objeto-vidro-copo-1.png': require('./images/objeto-vidro-copo-1.png'),
+  'objeto-vidro-copo-2.png': require('./images/objeto-vidro-copo-2.png'),
+  'objeto-vidro-copo-3.png': require('./images/objeto-vidro-copo-3.png'),
+  'objeto-vidro-copo-4.png': require('./images/objeto-vidro-copo-4.png')
 };
 
 // Grouped images by type
 const groupedImages = {
+  'objeto-acessorio-bolsa': [
+    'objeto-acessorio-bolsa-1.png',
+    'objeto-acessorio-bolsa-2.png',
+    'objeto-acessorio-bolsa-3.png',
+    'objeto-acessorio-bolsa-4.png'
+  ],
+  'objeto-acessorio-oculos': [
+    'objeto-acessorio-oculos-1.png',
+    'objeto-acessorio-oculos-2.png',
+    'objeto-acessorio-oculos-3.png',
+    'objeto-acessorio-oculos-4.png'
+  ],
+  'objeto-acessorio-relogio': [
+    'objeto-acessorio-relogio-1.png',
+    'objeto-acessorio-relogio-2.png',
+    'objeto-acessorio-relogio-3.png',
+    'objeto-acessorio-relogio-4.png'
+  ],
   'objeto-alimento-batata': [
     'objeto-alimento-batata-1.png',
     'objeto-alimento-batata-cartoon-1.png'
@@ -274,6 +372,18 @@ const groupedImages = {
     'objeto-animal-vaca-cartoon-3.png',
     'objeto-animal-vaca-cartoon-4.png'
   ],
+  'objeto-banheiro-chuveiro': [
+    'objeto-banheiro-chuveiro-1.png',
+    'objeto-banheiro-chuveiro-2.png',
+    'objeto-banheiro-chuveiro-3.png',
+    'objeto-banheiro-chuveiro-4.png'
+  ],
+  'objeto-calcado-sapato': [
+    'objeto-calcado-sapato-1.png',
+    'objeto-calcado-sapato-2.png',
+    'objeto-calcado-sapato-3.png',
+    'objeto-calcado-sapato-4.png'
+  ],
   'objeto-ceu-lua': [
     'objeto-ceu-lua-1.png',
     'objeto-ceu-lua-2.png',
@@ -283,11 +393,53 @@ const groupedImages = {
     'objeto-ceu-lua-cartoon-2.png',
     'objeto-ceu-lua-cartoon-4.png'
   ],
+  'objeto-container-garrafa': [
+    'objeto-container-garrafa-1.png',
+    'objeto-container-garrafa-2.png',
+    'objeto-container-garrafa-3.png',
+    'objeto-container-garrafa-4.png'
+  ],
   'objeto-cozinha-prato': [
     'objeto-cozinha-prato-4.png',
     'objeto-cozinha-prato-5.png',
     'objeto-cozinha-prato-6.png',
     'objeto-cozinha-prato-7.png'
+  ],
+  'objeto-educativo-livro': [
+    'objeto-educativo-livro-1.png',
+    'objeto-educativo-livro-2.png',
+    'objeto-educativo-livro-3.png',
+    'objeto-educativo-livro-4.png'
+  ],
+  'objeto-eletrodomestico-geladeira': [
+    'objeto-eletrodomestico-geladeira-1.png',
+    'objeto-eletrodomestico-geladeira-2.png',
+    'objeto-eletrodomestico-geladeira-3.png',
+    'objeto-eletrodomestico-geladeira-4.png'
+  ],
+  'objeto-eletrodomestico-microondas': [
+    'objeto-eletrodomestico-microondas-1.png',
+    'objeto-eletrodomestico-microondas-2.png',
+    'objeto-eletrodomestico-microondas-3.png',
+    'objeto-eletrodomestico-microondas-4.png'
+  ],
+  'objeto-eletronico-computador': [
+    'objeto-eletronico-computador-1.png',
+    'objeto-eletronico-computador-2.png',
+    'objeto-eletronico-computador-3.png',
+    'objeto-eletronico-computador-4.png'
+  ],
+  'objeto-eletronico-telefone': [
+    'objeto-eletronico-telefone-1.png',
+    'objeto-eletronico-telefone-2.png',
+    'objeto-eletronico-telefone-3.png',
+    'objeto-eletronico-telefone-4.png'
+  ],
+  'objeto-escrita-caneta': [
+    'objeto-escrita-caneta-1.png',
+    'objeto-escrita-caneta-2.png',
+    'objeto-escrita-caneta-3.png',
+    'objeto-escrita-caneta-4.png'
   ],
   'objeto-flor-girassol': [
     'objeto-flor-girassol-1.png',
@@ -345,6 +497,12 @@ const groupedImages = {
     'objeto-fruta-uvas-cartoon-2.png',
     'objeto-fruta-uvas-cartoon-3.png'
   ],
+  'objeto-iluminacao-lampada': [
+    'objeto-iluminacao-lampada-1.png',
+    'objeto-iluminacao-lampada-2.png',
+    'objeto-iluminacao-lampada-3.png',
+    'objeto-iluminacao-lampada-4.png'
+  ],
   'objeto-instrumento-bateria': [
     'objeto-instrumento-bateria-1.png',
     'objeto-instrumento-bateria-cartoon-1.png',
@@ -389,6 +547,30 @@ const groupedImages = {
     'objeto-instrumento-violino-cartoon-3.png',
     'objeto-instrumento-violino-cartoon-4.png'
   ],
+  'objeto-metalico-chave': [
+    'objeto-metalico-chave-1.png',
+    'objeto-metalico-chave-2.png',
+    'objeto-metalico-chave-3.png',
+    'objeto-metalico-chave-4.png'
+  ],
+  'objeto-moveis-almofada': [
+    'objeto-moveis-almofada-1.png',
+    'objeto-moveis-almofada-2.png',
+    'objeto-moveis-almofada-3.png',
+    'objeto-moveis-almofada-4.png'
+  ],
+  'objeto-moveis-cadeira': [
+    'objeto-moveis-cadeira-1.png',
+    'objeto-moveis-cadeira-2.png',
+    'objeto-moveis-cadeira-3.png',
+    'objeto-moveis-cadeira-4.png'
+  ],
+  'objeto-moveis-mesa': [
+    'objeto-moveis-mesa-1.png',
+    'objeto-moveis-mesa-2.png',
+    'objeto-moveis-mesa-3.png',
+    'objeto-moveis-mesa-4.png'
+  ],
   'objeto-movel-cama': [
     'objeto-movel-cama-1.png'
   ],
@@ -400,6 +582,12 @@ const groupedImages = {
   'objeto-movel-sofa': [
     'objeto-movel-sofa-1.png',
     'objeto-movel-sofa-2.png'
+  ],
+  'objeto-papelaria-caderno': [
+    'objeto-papelaria-caderno-1.png',
+    'objeto-papelaria-caderno-2.png',
+    'objeto-papelaria-caderno-3.png',
+    'objeto-papelaria-caderno-4.png'
   ],
   'objeto-talher-colher': [
     'objeto-talher-colher-1.png',
@@ -413,6 +601,18 @@ const groupedImages = {
   'objeto-talher-garfo': [
     'objeto-talher-garfo-1.png',
     'objeto-talher-garfo-3.png'
+  ],
+  'objeto-utensilio-tesoura': [
+    'objeto-utensilio-tesoura-1.png',
+    'objeto-utensilio-tesoura-2.png',
+    'objeto-utensilio-tesoura-3.png',
+    'objeto-utensilio-tesoura-4.png'
+  ],
+  'objeto-vidro-copo': [
+    'objeto-vidro-copo-1.png',
+    'objeto-vidro-copo-2.png',
+    'objeto-vidro-copo-3.png',
+    'objeto-vidro-copo-4.png'
   ]
 };
 
