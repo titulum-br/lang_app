@@ -5,7 +5,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/icon.png')}
+        source={require('../../assets/icon.png')}
         style={styles.logo}
         resizeMode="contain"
       />

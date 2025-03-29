@@ -6,8 +6,8 @@
  * All rights reserved.
  */
 
-import { imageMap } from '../assets/imageImports';
-import flashcardsData from '../assets/images/flashcards.json';
+import { imageMap } from '../../assets/imageImports';
+import flashcardsData from '../../assets/images/flashcards.json';
 
 // Function to get random item from array
 export const getRandomItem = (array) => array[Math.floor(Math.random() * array.length)];
@@ -59,6 +59,9 @@ export const generateFlashcards = () => {
   Object.keys(flashcardsData).forEach(category => {
     // Iterate through items in the category
     Object.entries(flashcardsData[category]).forEach(([key, item]) => {
+      // Log the item being processed, focusing on the tip
+      console.log(`FLASHCARD_UTILS: Processing item: ${key}, Tip value: ${item?.tip}`);
+
       // Get image (either from images array or single image property)
       let image = null;
       if (item.images && item.images.length > 0) {
@@ -73,8 +76,10 @@ export const generateFlashcards = () => {
         image = imageMap[item.image];
       }
       
-      // Skip items without an image
-      if (!image) return;
+      if (!image) {
+        console.log(`FLASHCARD_UTILS: Skipping item ${key} due to missing image.`);
+        return;
+      }
       
       // Create a flashcard with the correct properties
       const card = {

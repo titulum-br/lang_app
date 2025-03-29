@@ -3,10 +3,10 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './screens/HomeScreen';
-import SpeechExerciseScreen from './screens/SpeechExerciseScreen';
-import FlashcardGameScreen from './screens/FlashcardGameScreen';
-import FlashcardScreen from './app/screens/FlashcardScreen';
+import HomeScreen from './src/app/home.js';
+import SpeechExerciseScreen from './src/app/speechExercise.js';
+import FlashcardScreen from './src/app/flashcardScreen.js';
+import FlashcardGameScreen from './src/app/flashcardGameScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -67,21 +67,21 @@ export default function App() {
           }}
         />
         <Stack.Screen 
-          name="FlashcardGame" 
-          component={FlashcardGameScreen} 
+          name="NewFlashcards" 
+          component={FlashcardScreen} 
           options={{ 
-            title: 'Jogo de Nomes',
+            title: 'Cartões de Palavras',
             headerTitleStyle: {
               fontSize: 20,
               fontWeight: 'bold',
             }
           }}
         />
-        <Stack.Screen 
-          name="NewFlashcards" 
-          component={FlashcardScreen} 
-          options={{ 
-            title: 'Cartões de Palavras',
+        <Stack.Screen
+          name="FlashcardGameScreen"
+          component={FlashcardGameScreen}
+          options={{
+            title: 'Jogo de Nomes',
             headerTitleStyle: {
               fontSize: 20,
               fontWeight: 'bold',

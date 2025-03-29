@@ -10,7 +10,7 @@ import { Audio } from 'expo-av';
 import * as FileSystem from 'expo-file-system';
 import { Asset } from 'expo-asset';
 import { Platform, Alert } from 'react-native';
-import { audioMap } from '../assets/audioImports';
+import { audioMap } from '../../assets/audioImports';
 
 // Get a random number between 1-3 for audio sample variation
 export const getRandomSampleNumber = () => Math.floor(Math.random() * 3) + 1;
@@ -135,6 +135,7 @@ export const ensureAudioDirectoryExists = async () => {
 
 // Create a test audio file to ensure we always have something to play
 export const createTestAudioFile = async () => {
+  console.log("AUDIO_UTILS: createTestAudioFile - START");
   try {
     const audioDir = await ensureAudioDirectoryExists();
     const testAudioPath = `${audioDir}test-audio.mp3`;
@@ -153,13 +154,16 @@ export const createTestAudioFile = async () => {
       );
       
       console.log('Test audio file created at:', testAudioPath);
+      console.log("AUDIO_UTILS: createTestAudioFile - END (Success)");
       return testAudioPath;
     } else {
       console.log('Test audio file already exists at:', testAudioPath);
+      console.log("AUDIO_UTILS: createTestAudioFile - END (Success)");
       return testAudioPath;
     }
   } catch (error) {
     console.error('Error creating test audio file:', error);
+    console.log("AUDIO_UTILS: createTestAudioFile - END (Error)");
     throw error;
   }
 };
@@ -201,8 +205,10 @@ export const initAudio = async () => {
       playThroughEarpieceAndroid: false,
     });
     
-    // Ensure we have a test audio file
+    // Ensure a test audio file exists
+    console.log("AUDIO_UTILS: initAudio - Calling createTestAudioFile...");
     await createTestAudioFile();
+    console.log("AUDIO_UTILS: initAudio - createTestAudioFile finished.");
     
     console.log('Audio initialized successfully');
     return true;

@@ -11,17 +11,12 @@ import { View, TouchableOpacity, Text, Image, ActivityIndicator, Alert } from 'r
 import { Audio } from 'expo-av';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-
-// Import utility modules
-import styles from '../styles/FlashcardGameStyles';
-import { generateFlashcards } from '../utils/flashcardUtils';
-import { 
-  initAudio, 
-  playAudio, 
-  createTestAudioFile,
-  ensureAudioDirectoryExists
-} from '../utils/audioUtils';
-import { audioMap, testAudio } from '../assets/audioImports';
+import flashcardData from '../../assets/flashcards.json'; // Assuming this path is correct relative to src/app/
+import { processFlashcards, getRandomAudio, getRandomImage } from '../utils/flashcardProcessor'; // Assuming this path is correct relative to src/app/
+import styles from '../styles/flashcardGameStyles.js'; // Corrected path and filename
+import { generateFlashcards } from '../utils/flashcardUtils.js'; // Import generateFlashcards
+import { initAudio, playAudio, createTestAudioFile } from '../utils/audioUtils.js'; // Import createTestAudioFile
+import { audioMap } from '../../assets/audioImports.js'; // Import audio mapping (adjust path if needed)
 
 // Helper function to normalize accented characters
 const normalizeAccents = (text) => {
@@ -63,10 +58,30 @@ const FlashcardGameScreen = () => {
     };
   }, []);
   
-  // Load flashcards on component mount
+  // Generate flashcards on component mount
   useEffect(() => {
-    loadFlashcards();
-  }, []);
+    setLoading(true);
+    setError(null);
+    console.log("FLASHCARD_SCREEN: Calling generateFlashcards...");
+    try {
+      const cards = generateFlashcards(); // Call generateFlashcards
+      if (cards && cards.length > 0) {
+        setFlashcards(cards); // Set the flashcards state
+        setCurrentIndex(0);
+        setTipLevel(0);
+        setRoundsPlayed(0);
+        setGameComplete(false);
+      } else {
+        setError('Failed to generate flashcards or no cards found.');
+      }
+      console.log("FLASHCARD_SCREEN: generateFlashcards finished.");
+    } catch (err) {
+      console.error("Error generating flashcards:", err);
+      setError('An error occurred while loading flashcards.');
+    } finally {
+      setLoading(false);
+    }
+  }, []); // Dependency array is empty, runs once on mount
 
   const handlePlayAudio = async (type = 'tip') => {
     const currentFlashcard = flashcards[currentIndex];
@@ -239,28 +254,6 @@ const FlashcardGameScreen = () => {
     }
   };
 
-  const loadFlashcards = async () => {
-    setLoading(true);
-    
-    try {
-      // Make sure audio directory and test file exist
-      await createTestAudioFile();
-      
-      // Generate flashcards
-      const cards = generateFlashcards();
-      setFlashcards(cards);
-      setCurrentIndex(0);
-      setTipLevel(0);
-      setRoundsPlayed(0);
-      setGameComplete(false);
-    } catch (error) {
-      console.error('Error loading flashcards:', error);
-      setError('Failed to load flashcards. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   if (loading) {
     return (
       <View style={styles.container}>
@@ -279,7 +272,25 @@ const FlashcardGameScreen = () => {
           onPress={() => {
             setLoading(true);
             setError(null);
-            loadFlashcards();
+            console.log("FLASHCARD_SCREEN: Retrying generateFlashcards...");
+            try {
+              const cards = generateFlashcards();
+              if (cards && cards.length > 0) {
+                setFlashcards(cards);
+                setCurrentIndex(0);
+                setTipLevel(0);
+                setRoundsPlayed(0);
+                setGameComplete(false);
+              } else {
+                setError('Failed to generate flashcards or no cards found.');
+              }
+              console.log("FLASHCARD_SCREEN: generateFlashcards finished on retry.");
+            } catch (err) {
+              console.error("Error generating flashcards on retry:", err);
+              setError('An error occurred while reloading flashcards.');
+            } finally {
+              setLoading(false);
+            }
           }}
         >
           <Text style={styles.buttonText}>Tentar Novamente</Text>

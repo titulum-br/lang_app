@@ -7,7 +7,7 @@ export default function SpeechExerciseScreen({ navigation }) {
       <View style={styles.grid}>
         <TouchableOpacity
           style={[styles.button, styles.activeButton]}
-          onPress={() => navigation.navigate('FlashcardGame')}
+          onPress={() => navigation.navigate('FlashcardGameScreen')}
         >
           <Text style={styles.buttonText}>Jogo de Nomes</Text>
         </TouchableOpacity>
