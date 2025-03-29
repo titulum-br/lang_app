@@ -155,5 +155,60 @@
       "audioWord": "audio-word-language-saxofone",
       "images": "objeto-instrumento-saxofone"
     }
+  },
+  "acessorio": {
+    "bolsa": {
+      "name": "Bolsa",
+      "tip": "Bo",
+      "audioSyllable": "audio-syllable-language-bolsa-bo",
+      "audioWord": "audio-word-language-bolsa",
+      "images": "objeto-acessorio-bolsa"
+    },
+    "oculos": {
+      "name": "Óculos",
+      "tip": "Ó",
+      "audioSyllable": "audio-syllable-language-oculos-o",
+      "audioWord": "audio-word-language-oculos",
+      "images": "objeto-acessorio-oculos"
+    },
+    "relogio": {
+      "name": "Relógio",
+      "tip": "Re",
+      "audioSyllable": "audio-syllable-language-relogio-re",
+      "audioWord": "audio-word-language-relogio",
+      "images": "objeto-acessorio-relogio"
+    }
+  },
+  "eletrodomesticos": {
+    "microondas": {
+      "name": "Microondas",
+      "tip": "Mi",
+      "audioSyllable": "audio-syllable-language-microondas-mi",
+      "audioWord": "audio-word-language-microondas",
+      "images": "objeto-eletrodomestico-microondas"
+    },
+    "geladeira": {
+      "name": "Geladeira",
+      "tip": "Ge",
+      "audioSyllable": "audio-syllable-language-geladeira-ge",
+      "audioWord": "audio-word-language-geladeira",
+      "images": "objeto-eletrodomestico-geladeira"
+    }
+  },
+  "eletronicos": {
+    "computador": {
+      "name": "Computador",
+      "tip": "Co",
+      "audioSyllable": "audio-syllable-language-computador-co",
+      "audioWord": "audio-word-language-computador",
+      "images": "objeto-eletronico-computador"
+    },
+    "telefone": {
+      "name": "Telefone",
+      "tip": "Te",
+      "audioSyllable": "audio-syllable-language-telefone-te",
+      "audioWord": "audio-word-language-telefone",
+      "images": "objeto-eletronico-telefone"
+    }
   }
 }

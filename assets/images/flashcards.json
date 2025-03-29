@@ -451,21 +451,39 @@
   "acessorio": {
     "bolsa": {
       "name": "Bolsa",
-      "images": "objeto-acessorio-bolsa",
       "audioWord": "audio-word-pt_br-bolsa",
       "audioSyllable": "audio-syllable-pt_br-bolsa-bo",
-      "tip": "bo"
+      "tip": "bo",
+      "images": [
+        "objeto-acessorio-bolsa-1.png",
+        "objeto-acessorio-bolsa-2.png",
+        "objeto-acessorio-bolsa-3.png",
+        "objeto-acessorio-bolsa-4.png",
+        "objeto-acessorio-bolsa-cartoon-1.png"
+      ] 
     },
     "oculos": {
       "name": "Oculos",
-      "images": "objeto-acessorio-oculos",
+      "images": [
+        "objeto-acessorio-oculos-1.png",
+        "objeto-acessorio-oculos-2.png",
+        "objeto-acessorio-oculos-3.png",
+        "objeto-acessorio-oculos-4.png",
+        "objeto-acessorio-oculos-cartoon-1.png"
+      ],
       "audioWord": "audio-word-pt_br-oculos",
       "audioSyllable": "audio-syllable-pt_br-oculos-oc",
       "tip": "oc"
     },
     "relogio": {
       "name": "Relogio",
-      "images": "objeto-acessorio-relogio",
+      "images": [
+        "objeto-acessorio-relogio-1.png",
+        "objeto-acessorio-relogio-2.png",
+        "objeto-acessorio-relogio-3.png",
+        "objeto-acessorio-relogio-4.png",
+        "objeto-acessorio-relogio-cartoon-1.png"
+      ],
       "audioWord": "audio-word-pt_br-relogio",
       "audioSyllable": "audio-syllable-pt_br-relogio-re",
       "tip": "re"
@@ -474,7 +492,13 @@
   "banheiro": {
     "chuveiro": {
       "name": "Chuveiro",
-      "images": "objeto-banheiro-chuveiro",
+        "images": [
+        "objeto-banheiro-chuveiro-1.png",
+        "objeto-banheiro-chuveiro-2.png",
+        "objeto-banheiro-chuveiro-3.png",
+        "objeto-banheiro-chuveiro-4.png",
+        "objeto-banheiro-chuveiro-cartoon-1.png"
+      ],
       "audioWord": "audio-word-pt_br-chuveiro",
       "audioSyllable": "audio-syllable-pt_br-chuveiro-ch",
       "tip": "ch"
@@ -483,7 +507,12 @@
   "calcado": {
     "sapato": {
       "name": "Sapato",
-      "images": "objeto-calcado-sapato",
+      "images": [
+        "objeto-calcado-sapato-1.png",
+        "objeto-calcado-sapato-2.png",
+        "objeto-calcado-sapato-3.png",
+        "objeto-calcado-sapato-4.png",
+      ],
       "audioWord": "audio-word-pt_br-sapato",
       "audioSyllable": "audio-syllable-pt_br-sapato-sa",
       "tip": "sa"
@@ -492,7 +521,12 @@
   "container": {
     "garrafa": {
       "name": "Garrafa",
-      "images": "objeto-container-garrafa",
+      "images": [
+        "objeto-container-garrafa-1.png",
+        "objeto-container-garrafa-2.png",
+        "objeto-container-garrafa-3.png",
+        "objeto-container-garrafa-4.png",
+      ],
       "audioWord": "audio-word-pt_br-garrafa",
       "audioSyllable": "audio-syllable-pt_br-garrafa-ga",
       "tip": "ga"
@@ -501,7 +535,12 @@
   "educativo": {
     "livro": {
       "name": "Livro",
-      "images": "objeto-educativo-livro",
+      "images": [
+          "objeto-educativo-livro-1.png",
+          "objeto-educativo-livro-2.png",
+          "objeto-educativo-livro-3.png",
+          "objeto-educativo-livro-4.png",
+        ],
       "audioWord": "audio-word-pt_br-livro",
       "audioSyllable": "audio-syllable-pt_br-livro-li",
       "tip": "li"
@@ -510,14 +549,24 @@
   "eletrodomestico": {
     "geladeira": {
       "name": "Geladeira",
-      "images": "objeto-eletrodomestico-geladeira",
+      "images": [
+        "objeto-eletrodomestico-geladeira-1.png",
+        "objeto-eletrodomestico-geladeira-2.png",
+        "objeto-eletrodomestico-geladeira-3.png",
+        "objeto-eletrodomestico-geladeira-4.png",
+      ],
       "audioWord": "audio-word-pt_br-geladeira",
       "audioSyllable": "audio-syllable-pt_br-geladeira-ge",
       "tip": "ge"
     },
     "microondas": {
       "name": "Microondas",
-      "images": "objeto-eletrodomestico-microondas",
+      "images": [
+        "objeto-eletrodomestico-microondas-1.png",
+        "objeto-eletrodomestico-microondas-2.png",
+        "objeto-eletrodomestico-microondas-3.png",
+        "objeto-eletrodomestico-microondas-4.png",
+      ],
       "audioWord": "audio-word-pt_br-microondas",
       "audioSyllable": "audio-syllable-pt_br-microondas-mi",
       "tip": "mi"
@@ -526,7 +575,12 @@
   "eletronico": {
     "computador": {
       "name": "Computador",
-      "images": "objeto-eletronico-computador",
+      "images": [
+        "objeto-eletronico-computador-1.png",
+        "objeto-eletronico-computador-2.png",
+        "objeto-eletronico-computador-3.png",
+        "objeto-eletronico-computador-4.png",
+      ],
       "audioWord": "audio-word-pt_br-computador",
       "audioSyllable": "audio-syllable-pt_br-computador-co",
       "tip": "co"
@@ -542,7 +596,12 @@
   "escrita": {
     "caneta": {
       "name": "Caneta",
-      "images": "objeto-escrita-caneta",
+      "images": [
+        "objeto-escrita-caneta-1.png",
+        "objeto-escrita-caneta-2.png",
+        "objeto-escrita-caneta-3.png",
+        "objeto-escrita-caneta-4.png",
+      ],
       "audioWord": "audio-word-pt_br-caneta",
       "audioSyllable": "audio-syllable-pt_br-caneta-ca",
       "tip": "ca"
@@ -551,7 +610,12 @@
   "iluminacao": {
     "lampada": {
       "name": "Lampada",
-      "images": "objeto-iluminacao-lampada",
+      "images": [
+        "objeto-iluminacao-lampada-1.png",
+        "objeto-iluminacao-lampada-2.png",
+        "objeto-iluminacao-lampada-3.png",
+        "objeto-iluminacao-lampada-4.png",
+      ],
       "audioWord": "audio-word-pt_br-lampada",
       "audioSyllable": "audio-syllable-pt_br-lampada-la",
       "tip": "la"
@@ -560,7 +624,12 @@
   "metalico": {
     "chave": {
       "name": "Chave",
-      "images": "objeto-metalico-chave",
+      "images": [
+        "objeto-metalico-chave-1.png",
+        "objeto-metalico-chave-2.png",
+        "objeto-metalico-chave-3.png",
+        "objeto-metalico-chave-4.png",
+      ],
       "audioWord": "audio-word-pt_br-chave",
       "audioSyllable": "audio-syllable-pt_br-chave-ch",
       "tip": "ch"
@@ -569,21 +638,36 @@
   "moveis": {
     "almofada": {
       "name": "Almofada",
-      "images": "objeto-moveis-almofada",
+      "images": [
+        "objeto-moveis-almofada-1.png",
+        "objeto-moveis-almofada-2.png",
+        "objeto-moveis-almofada-3.png",
+        "objeto-moveis-almofada-4.png",
+      ],
       "audioWord": "audio-word-pt_br-almofada",
       "audioSyllable": "audio-syllable-pt_br-almofada-al",
       "tip": "al"
     },
     "cadeira": {
       "name": "Cadeira",
-      "images": "objeto-moveis-cadeira",
+      "images": [
+        "objeto-moveis-cadeira-1.png",
+        "objeto-moveis-cadeira-2.png",
+        "objeto-moveis-cadeira-3.png",
+        "objeto-moveis-cadeira-4.png",
+      ],
       "audioWord": "audio-word-pt_br-cadeira",
       "audioSyllable": "audio-syllable-pt_br-cadeira-ca",
       "tip": "ca"
     },
     "mesa": {
       "name": "Mesa",
-      "images": "objeto-moveis-mesa",
+      "images": [
+        "objeto-moveis-mesa-1.png",
+        "objeto-moveis-mesa-2.png",
+        "objeto-moveis-mesa-3.png",
+        "objeto-moveis-mesa-4.png",
+      ],
       "audioWord": "audio-word-pt_br-mesa",
       "audioSyllable": "audio-syllable-pt_br-mesa-me",
       "tip": "me"
@@ -592,7 +676,12 @@
   "papelaria": {
     "caderno": {
       "name": "Caderno",
-      "images": "objeto-papelaria-caderno",
+      "images": [
+        "objeto-papelaria-caderno-1.png",
+        "objeto-papelaria-caderno-2.png",
+        "objeto-papelaria-caderno-3.png",
+        "objeto-papelaria-caderno-4.png",
+      ],
       "audioWord": "audio-word-pt_br-caderno",
       "audioSyllable": "audio-syllable-pt_br-caderno-ca",
       "tip": "ca"
@@ -601,7 +690,12 @@
   "utensilio": {
     "tesoura": {
       "name": "Tesoura",
-      "images": "objeto-utensilio-tesoura",
+      "images": [
+        "objeto-utensilio-tesoura-1.png",
+        "objeto-utensilio-tesoura-2.png",
+        "objeto-utensilio-tesoura-3.png",
+        "objeto-utensilio-tesoura-4.png",
+      ],
       "audioWord": "audio-word-pt_br-tesoura",
       "audioSyllable": "audio-syllable-pt_br-tesoura-te",
       "tip": "te"
@@ -610,7 +704,12 @@
   "vidro": {
     "copo": {
       "name": "Copo",
-      "images": "objeto-vidro-copo",
+      "images": [
+        "objeto-vidro-copo-1.png",
+        "objeto-vidro-copo-2.png",
+        "objeto-vidro-copo-3.png",
+        "objeto-vidro-copo-4.png",
+      ],
       "audioWord": "audio-word-pt_br-copo",
       "audioSyllable": "audio-syllable-pt_br-copo-co",
       "tip": "co"
