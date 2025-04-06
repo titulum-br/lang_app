@@ -334,7 +334,6 @@ const groupedImages = {
     'objeto-animal-gato-1.png'
   ],
   'objeto-animal-ovelha': [
-    'objeto-animal-ovelha-1.png',
     'objeto-animal-ovelha-2.png',
     'objeto-animal-ovelha-3.png',
     'objeto-animal-ovelha-cartoon-1.png',
@@ -360,7 +359,8 @@ const groupedImages = {
     'objeto-animal-porco-4.png',
     'objeto-animal-porco-cartoon-1.png',
     'objeto-animal-porco-cartoon-2.png',
-    'objeto-animal-porco-cartoon-3.png'
+    'objeto-animal-porco-cartoon-3.png',
+    'objeto-animal-porco-cartoon-4.png'
   ],
   'objeto-animal-vaca': [
     'objeto-animal-vaca-1.png',

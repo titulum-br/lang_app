@@ -1,4 +1,13 @@
 /**
+ * This script renames syllable audio files in the `../assets/audio` directory.
+ * It specifically targets files matching the pattern `audio-syllable-pt_br-...-syllable-...-klaus-....mp3`.
+ * It removes accents from the `syllable` part of the filename.
+ * For example, `audio-syllable-pt_br-maca-má-klaus-1.mp3` would be renamed to
+ * `audio-syllable-pt_br-maca-ma-klaus-1.mp3`.
+ * This is a one-off utility script.
+ */
+
+/**
  * Script to rename audio files by removing accents from syllable names
  */
 

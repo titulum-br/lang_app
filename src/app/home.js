@@ -16,9 +16,16 @@ const HomeScreen = ({ navigation }) => {
           style={styles.button}
           onPress={() => navigation.navigate('SpeechExercise')}
         >
-          <Text style={styles.buttonText}>Exercícios de Fala</Text>
+          <Text style={styles.buttonText}>Clique Aqui!</Text>
         </TouchableOpacity>
         
+        {/* Button for Phonological Memory Training exercise 
+        <TouchableOpacity
+          style={[styles.button, { marginTop: 20 }]}
+          onPress={() => navigation.navigate('RepetitionSpanExercise')}
+        >
+          <Text style={styles.buttonText}>Treino de Memória Fonológica</Text>
+        </TouchableOpacity>*/}
       </View>
     </View>
   );

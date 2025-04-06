@@ -7,6 +7,7 @@ import HomeScreen from './src/app/home.js';
 import SpeechExerciseScreen from './src/app/speechExercise.js';
 import FlashcardScreen from './src/app/flashcardScreen.js';
 import FlashcardGameScreen from './src/app/flashcardGameScreen.js';
+import RepetitionSpanExerciseScreen from './src/app/repetitionSpanGame.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -82,6 +83,17 @@ export default function App() {
           component={FlashcardGameScreen}
           options={{
             title: 'Jogo de Nomes',
+            headerTitleStyle: {
+              fontSize: 20,
+              fontWeight: 'bold',
+            }
+          }}
+        />
+        <Stack.Screen
+          name="RepetitionSpanExercise"
+          component={RepetitionSpanExerciseScreen}
+          options={{
+            title: 'Treino de Memória Fonológica',
             headerTitleStyle: {
               fontSize: 20,
               fontWeight: 'bold',

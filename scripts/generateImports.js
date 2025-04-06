@@ -1,3 +1,19 @@
+/**
+ * This script automatically generates JavaScript files (`audioImports.js` and `imageImports.js`)
+ * within the `../assets/` directory.
+ * 
+ * It scans the `../assets/audio` and `../assets/images` directories for .mp3 and image files, respectively.
+ * It then creates modules that export maps (`audioMap`, `imageMap`) where keys are filenames
+ * and values are the result of `require('./path/to/asset')`.
+ * 
+ * This approach is necessary for React Native's Metro bundler, which requires asset paths
+ * to be known statically at build time (dynamic `require` calls with variable paths don't work).
+ * By pre-generating these import maps, the application can reference assets dynamically by filename
+ * while still satisfying Metro's static analysis requirements.
+ * 
+ * Run this script whenever assets in the audio or images directories are added, removed, or renamed.
+ */
+
 const fs = require('fs');
 const path = require('path');
 

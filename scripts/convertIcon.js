@@ -1,3 +1,12 @@
+/**
+ * This script reads the `icon.svg` file from the `../assets` directory
+ * and uses the `sharp` library to convert it into multiple PNG files
+ * (`icon.png`, `splash.png`, `adaptive-icon.png`, `favicon.png`) 
+ * at specified sizes.
+ * The generated PNG files are saved back into the `../assets` directory.
+ * This is likely used to generate the necessary app icon and splash screen formats for Expo.
+ */
+
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');

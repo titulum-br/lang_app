@@ -1,3 +1,13 @@
+/**
+ * This script scans the `generated_images` directory for image files
+ * following the pattern `objeto-category-name-number.png`.
+ * It groups these images by category and name, creating a basic
+ * structure for flashcard items.
+ * This structure (including name, a placeholder for image paths, audio filenames,
+ * and null tips) is written to `flashcards_base.json`, potentially overwriting it.
+ * It can be run directly or imported as a module.
+ */
+
 const fs = require('fs');
 const path = require('path');
 

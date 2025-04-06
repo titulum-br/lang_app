@@ -1,4 +1,19 @@
 /**
+ * This script verifies the audio files in the `../assets/audio` directory
+ * against the expected files defined in `../assets/images/flashcards.json`.
+ * 
+ * It checks for:
+ * 1. Missing Files: Compares expected filenames (based on flashcard items, tips,
+ *    voice name, and sample count) against existing files.
+ * 2. Extra Files: Identifies any .mp3 files in the audio directory that don't
+ *    match the expected naming convention or items in the flashcards JSON.
+ * 3. File Size: Calculates average file size and flags any suspiciously small files
+ *    which might indicate corrupted or incomplete generation.
+ * 
+ * The results are printed to the console.
+ */
+
+/**
  * Audio File Verification Script
  * 
  * This script verifies that audio files have been generated correctly for all flashcards.

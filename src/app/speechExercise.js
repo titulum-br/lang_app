@@ -19,8 +19,11 @@ export default function SpeechExerciseScreen({ navigation }) {
           <Text style={styles.buttonText}>Cartões de Palavras</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.button, styles.disabledButton]}>
-          <Text style={styles.buttonText}>Exercício 3</Text>
+        <TouchableOpacity 
+          style={[styles.button, styles.activeButton]}
+          onPress={() => navigation.navigate('RepetitionSpanExercise')}
+        >
+          <Text style={styles.buttonText}>Treino de Memória Fonológica</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={[styles.button, styles.disabledButton]}>

@@ -451,8 +451,8 @@
   "acessorio": {
     "bolsa": {
       "name": "Bolsa",
-      "audioWord": "audio-word-pt_br-bolsa",
-      "audioSyllable": "audio-syllable-pt_br-bolsa-bo",
+      "audioWord": "audio-word-pt_br-bolsa.mp3",
+      "audioSyllable": "audio-syllable-pt_br-bolsa-bo.mp3",
       "tip": "bo",
       "images": [
         "objeto-acessorio-bolsa-1.png",
@@ -471,8 +471,8 @@
         "objeto-acessorio-oculos-4.png",
         "objeto-acessorio-oculos-cartoon-1.png"
       ],
-      "audioWord": "audio-word-pt_br-oculos",
-      "audioSyllable": "audio-syllable-pt_br-oculos-oc",
+      "audioWord": "audio-word-pt_br-oculos.mp3",
+      "audioSyllable": "audio-syllable-pt_br-oculos-oc.mp3",
       "tip": "oc"
     },
     "relogio": {
@@ -484,8 +484,8 @@
         "objeto-acessorio-relogio-4.png",
         "objeto-acessorio-relogio-cartoon-1.png"
       ],
-      "audioWord": "audio-word-pt_br-relogio",
-      "audioSyllable": "audio-syllable-pt_br-relogio-re",
+      "audioWord": "audio-word-pt_br-relogio.mp3",
+      "audioSyllable": "audio-syllable-pt_br-relogio-re.mp3",
       "tip": "re"
     }
   },
@@ -499,8 +499,8 @@
         "objeto-banheiro-chuveiro-4.png",
         "objeto-banheiro-chuveiro-cartoon-1.png"
       ],
-      "audioWord": "audio-word-pt_br-chuveiro",
-      "audioSyllable": "audio-syllable-pt_br-chuveiro-ch",
+      "audioWord": "audio-word-pt_br-chuveiro.mp3",
+      "audioSyllable": "audio-syllable-pt_br-chuveiro-ch.mp3",
       "tip": "ch"
     }
   },
@@ -511,10 +511,10 @@
         "objeto-calcado-sapato-1.png",
         "objeto-calcado-sapato-2.png",
         "objeto-calcado-sapato-3.png",
-        "objeto-calcado-sapato-4.png",
+        "objeto-calcado-sapato-4.png"
       ],
-      "audioWord": "audio-word-pt_br-sapato",
-      "audioSyllable": "audio-syllable-pt_br-sapato-sa",
+      "audioWord": "audio-word-pt_br-sapato.mp3",
+      "audioSyllable": "audio-syllable-pt_br-sapato-sa.mp3",
       "tip": "sa"
     }
   },
@@ -525,10 +525,10 @@
         "objeto-container-garrafa-1.png",
         "objeto-container-garrafa-2.png",
         "objeto-container-garrafa-3.png",
-        "objeto-container-garrafa-4.png",
+        "objeto-container-garrafa-4.png"
       ],
-      "audioWord": "audio-word-pt_br-garrafa",
-      "audioSyllable": "audio-syllable-pt_br-garrafa-ga",
+      "audioWord": "audio-word-pt_br-garrafa.mp3",
+      "audioSyllable": "audio-syllable-pt_br-garrafa-ga.mp3",
       "tip": "ga"
     }
   },
@@ -536,13 +536,13 @@
     "livro": {
       "name": "Livro",
       "images": [
-          "objeto-educativo-livro-1.png",
-          "objeto-educativo-livro-2.png",
-          "objeto-educativo-livro-3.png",
-          "objeto-educativo-livro-4.png",
-        ],
-      "audioWord": "audio-word-pt_br-livro",
-      "audioSyllable": "audio-syllable-pt_br-livro-li",
+        "objeto-educativo-livro-1.png",
+        "objeto-educativo-livro-2.png",
+        "objeto-educativo-livro-3.png",
+        "objeto-educativo-livro-4.png"
+      ],
+      "audioWord": "audio-word-pt_br-livro.mp3",
+      "audioSyllable": "audio-syllable-pt_br-livro-li.mp3",
       "tip": "li"
     }
   },
@@ -553,10 +553,10 @@
         "objeto-eletrodomestico-geladeira-1.png",
         "objeto-eletrodomestico-geladeira-2.png",
         "objeto-eletrodomestico-geladeira-3.png",
-        "objeto-eletrodomestico-geladeira-4.png",
+        "objeto-eletrodomestico-geladeira-4.png"
       ],
-      "audioWord": "audio-word-pt_br-geladeira",
-      "audioSyllable": "audio-syllable-pt_br-geladeira-ge",
+      "audioWord": "audio-word-pt_br-geladeira.mp3",
+      "audioSyllable": "audio-syllable-pt_br-geladeira-ge.mp3",
       "tip": "ge"
     },
     "microondas": {
@@ -565,10 +565,10 @@
         "objeto-eletrodomestico-microondas-1.png",
         "objeto-eletrodomestico-microondas-2.png",
         "objeto-eletrodomestico-microondas-3.png",
-        "objeto-eletrodomestico-microondas-4.png",
+        "objeto-eletrodomestico-microondas-4.png"
       ],
-      "audioWord": "audio-word-pt_br-microondas",
-      "audioSyllable": "audio-syllable-pt_br-microondas-mi",
+      "audioWord": "audio-word-pt_br-microondas.mp3",
+      "audioSyllable": "audio-syllable-pt_br-microondas-mi.mp3",
       "tip": "mi"
     }
   },
@@ -579,17 +579,22 @@
         "objeto-eletronico-computador-1.png",
         "objeto-eletronico-computador-2.png",
         "objeto-eletronico-computador-3.png",
-        "objeto-eletronico-computador-4.png",
+        "objeto-eletronico-computador-4.png"
       ],
-      "audioWord": "audio-word-pt_br-computador",
-      "audioSyllable": "audio-syllable-pt_br-computador-co",
+      "audioWord": "audio-word-pt_br-computador.mp3",
+      "audioSyllable": "audio-syllable-pt_br-computador-co.mp3",
       "tip": "co"
     },
     "telefone": {
       "name": "Telefone",
-      "images": "objeto-eletronico-telefone",
-      "audioWord": "audio-word-pt_br-telefone",
-      "audioSyllable": "audio-syllable-pt_br-telefone-te",
+      "images": [
+        "objeto-eletronico-telefone-1.png",
+        "objeto-eletronico-telefone-2.png",
+        "objeto-eletronico-telefone-3.png",
+        "objeto-eletronico-telefone-4.png"
+      ],
+      "audioWord": "audio-word-pt_br-telefone.mp3",
+      "audioSyllable": "audio-syllable-pt_br-telefone-te.mp3",
       "tip": "te"
     }
   },
@@ -600,10 +605,10 @@
         "objeto-escrita-caneta-1.png",
         "objeto-escrita-caneta-2.png",
         "objeto-escrita-caneta-3.png",
-        "objeto-escrita-caneta-4.png",
+        "objeto-escrita-caneta-4.png"
       ],
-      "audioWord": "audio-word-pt_br-caneta",
-      "audioSyllable": "audio-syllable-pt_br-caneta-ca",
+      "audioWord": "audio-word-pt_br-caneta.mp3",
+      "audioSyllable": "audio-syllable-pt_br-caneta-ca.mp3",
       "tip": "ca"
     }
   },
@@ -614,10 +619,10 @@
         "objeto-iluminacao-lampada-1.png",
         "objeto-iluminacao-lampada-2.png",
         "objeto-iluminacao-lampada-3.png",
-        "objeto-iluminacao-lampada-4.png",
+        "objeto-iluminacao-lampada-4.png"
       ],
-      "audioWord": "audio-word-pt_br-lampada",
-      "audioSyllable": "audio-syllable-pt_br-lampada-la",
+      "audioWord": "audio-word-pt_br-lampada.mp3",
+      "audioSyllable": "audio-syllable-pt_br-lampada-la.mp3",
       "tip": "la"
     }
   },
@@ -628,10 +633,10 @@
         "objeto-metalico-chave-1.png",
         "objeto-metalico-chave-2.png",
         "objeto-metalico-chave-3.png",
-        "objeto-metalico-chave-4.png",
+        "objeto-metalico-chave-4.png"
       ],
-      "audioWord": "audio-word-pt_br-chave",
-      "audioSyllable": "audio-syllable-pt_br-chave-ch",
+      "audioWord": "audio-word-pt_br-chave.mp3",
+      "audioSyllable": "audio-syllable-pt_br-chave-ch.mp3",
       "tip": "ch"
     }
   },
@@ -642,10 +647,10 @@
         "objeto-moveis-almofada-1.png",
         "objeto-moveis-almofada-2.png",
         "objeto-moveis-almofada-3.png",
-        "objeto-moveis-almofada-4.png",
+        "objeto-moveis-almofada-4.png"
       ],
-      "audioWord": "audio-word-pt_br-almofada",
-      "audioSyllable": "audio-syllable-pt_br-almofada-al",
+      "audioWord": "audio-word-pt_br-almofada.mp3",
+      "audioSyllable": "audio-syllable-pt_br-almofada-al.mp3",
       "tip": "al"
     },
     "cadeira": {
@@ -654,10 +659,10 @@
         "objeto-moveis-cadeira-1.png",
         "objeto-moveis-cadeira-2.png",
         "objeto-moveis-cadeira-3.png",
-        "objeto-moveis-cadeira-4.png",
+        "objeto-moveis-cadeira-4.png"
       ],
-      "audioWord": "audio-word-pt_br-cadeira",
-      "audioSyllable": "audio-syllable-pt_br-cadeira-ca",
+      "audioWord": "audio-word-pt_br-cadeira.mp3",
+      "audioSyllable": "audio-syllable-pt_br-cadeira-ca.mp3",
       "tip": "ca"
     },
     "mesa": {
@@ -666,10 +671,10 @@
         "objeto-moveis-mesa-1.png",
         "objeto-moveis-mesa-2.png",
         "objeto-moveis-mesa-3.png",
-        "objeto-moveis-mesa-4.png",
+        "objeto-moveis-mesa-4.png"
       ],
-      "audioWord": "audio-word-pt_br-mesa",
-      "audioSyllable": "audio-syllable-pt_br-mesa-me",
+      "audioWord": "audio-word-pt_br-mesa.mp3",
+      "audioSyllable": "audio-syllable-pt_br-mesa-me.mp3",
       "tip": "me"
     }
   },
@@ -680,10 +685,10 @@
         "objeto-papelaria-caderno-1.png",
         "objeto-papelaria-caderno-2.png",
         "objeto-papelaria-caderno-3.png",
-        "objeto-papelaria-caderno-4.png",
+        "objeto-papelaria-caderno-4.png"
       ],
-      "audioWord": "audio-word-pt_br-caderno",
-      "audioSyllable": "audio-syllable-pt_br-caderno-ca",
+      "audioWord": "audio-word-pt_br-caderno.mp3",
+      "audioSyllable": "audio-syllable-pt_br-caderno-ca.mp3",
       "tip": "ca"
     }
   },
@@ -694,10 +699,10 @@
         "objeto-utensilio-tesoura-1.png",
         "objeto-utensilio-tesoura-2.png",
         "objeto-utensilio-tesoura-3.png",
-        "objeto-utensilio-tesoura-4.png",
+        "objeto-utensilio-tesoura-4.png"
       ],
-      "audioWord": "audio-word-pt_br-tesoura",
-      "audioSyllable": "audio-syllable-pt_br-tesoura-te",
+      "audioWord": "audio-word-pt_br-tesoura.mp3",
+      "audioSyllable": "audio-syllable-pt_br-tesoura-te.mp3",
       "tip": "te"
     }
   },
@@ -708,10 +713,10 @@
         "objeto-vidro-copo-1.png",
         "objeto-vidro-copo-2.png",
         "objeto-vidro-copo-3.png",
-        "objeto-vidro-copo-4.png",
+        "objeto-vidro-copo-4.png"
       ],
-      "audioWord": "audio-word-pt_br-copo",
-      "audioSyllable": "audio-syllable-pt_br-copo-co",
+      "audioWord": "audio-word-pt_br-copo.mp3",
+      "audioSyllable": "audio-syllable-pt_br-copo-co.mp3",
       "tip": "co"
     }
   }

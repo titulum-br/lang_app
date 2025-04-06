@@ -1,4 +1,21 @@
 /**
+ * This script is designed to test various aspects of the audio handling 
+ * within the Expo environment, intended to be run on a device or emulator 
+ * where `expo-av` and `expo-file-system` are available.
+ * 
+ * It performs the following steps:
+ * 1. Initializes Expo Audio mode.
+ * 2. Verifies if specific test audio files (syllable and word for "cachorro") 
+ *    exist in the `../assets/audio` directory.
+ * 3. Attempts to copy these asset files to the app's document directory 
+ *    (simulating how assets might be handled in a standalone build).
+ * 4. Attempts to play the audio files from the document directory using Expo Audio.
+ * 
+ * Note: This uses Node.js `fs` for initial asset checks but relies on Expo modules
+ * for filesystem operations and audio playback, so it needs an Expo runtime.
+ */
+
+/**
  * Test script for audio playback functionality
  * 
  * This script tests:

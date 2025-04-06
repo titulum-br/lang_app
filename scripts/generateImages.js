@@ -1,3 +1,12 @@
+/**
+ * This script generates images using a local ComfyUI instance (assumed to be running on 127.0.0.1:8188).
+ * It reads prompts and configuration from `image_config.json`.
+ * For each prompt, it generates a specified number of images (`tries`),
+ * using a workflow defined in `basic_img_gen.json`.
+ * Each image generation uses a unique seed based on the current time and the try number.
+ * The generated images are saved to the `generated_images` directory.
+ */
+
 const fs = require('fs');
 const fetch = require('node-fetch');
 const path = require('path');
