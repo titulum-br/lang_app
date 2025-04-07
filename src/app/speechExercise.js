@@ -23,11 +23,13 @@ export default function SpeechExerciseScreen({ navigation }) {
           style={[styles.button, styles.activeButton]}
           onPress={() => navigation.navigate('RepetitionSpanExercise')}
         >
-          <Text style={styles.buttonText}>Treino de Memória Fonológica</Text>
+          <Text style={styles.buttonText}>Memória de Trabalho</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.button, styles.disabledButton]}>
-          <Text style={styles.buttonText}>Exercício 4</Text>
+        <TouchableOpacity style={[styles.button, styles.disabledButton]}
+          onPress={() => navigation.navigate('SyllableSpanExercise')}
+        >
+          <Text style={styles.buttonText}>Memória de Trabalho Fonológica</Text>
         </TouchableOpacity>
       </View>
     </View>

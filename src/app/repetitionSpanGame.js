@@ -3,44 +3,71 @@ import {
   View,
   Text,
   TouchableOpacity,
-  StyleSheet
 } from 'react-native';
-// Você pode unificar para um único arquivo de estilos ou
-// adaptar para seu projeto. Aqui deixo tudo em um único lugar
-// para facilitar o exemplo.
 
-// import { useTTS } from '../hooks/useTTS'; // Exemplo: hook para Text-To-Speech (se desejar)
-export default function RepetitionSpanExerciseScreen({ navigation }) {
-  // ESTADOS
-  const [sequence, setSequence] = useState([]);
+// TTS (caso use Expo):
+import * as Speech from 'expo-speech';
+
+// Confetti Cannon
+import ConfettiCannon from 'react-native-confetti-cannon';
+
+// Import styles
+import styles from '../styles/repetitionSpanStyles.js';
+
+export default function RepetitionSpanExerciseScreen() {
+  // ESTADOS PRINCIPAIS
+  const [sequence, setSequence] = useState([]);           // sequência atual de dígitos
   const [displaySequence, setDisplaySequence] = useState(true);
   const [userInput, setUserInput] = useState([]);
   const [feedback, setFeedback] = useState('');
-  const [level, setLevel] = useState(2); // Nível inicial
+
+  // Informações de jogo
+  const [level, setLevel] = useState(1);                  // nível inicia em 1 (um dígito)
+  const [score, setScore] = useState(0);
+  const [acertosNoNivel, setAcertosNoNivel] = useState(0);
+  const [errosNoNivel, setErrosNoNivel] = useState(0);
+
+  // Tentativas nesta rodada (até 3)
+  const [tentativasRestantes, setTentativasRestantes] = useState(3);
+
+  // Controla exibição de botões e confete
   const [showNextButton, setShowNextButton] = useState(false);
 
-  // UseRef para armazenar o timeout e poder limpar na desmontagem
+  // Para disparar confete quando acerta
+  const confettiRef = useRef(null);
+
+  // Timeout para esconder a sequência
   const hideSequenceTimeout = useRef(null);
 
   // ==============================
   // FUNÇÕES AUXILIARES
   // ==============================
 
-  /**
-   * Gera uma sequência de números de 0 a 9 com tamanho igual ao nível atual.
-   */
-  const generateSequence = () => {
+  function speakSequence(seq) {
+    // Fala cada dígito com pequena pausa
+    seq.forEach((digit, index) => {
+      setTimeout(() => {
+        Speech.speak(String(digit), {
+          language: 'pt-BR',
+          rate: 1.0
+        });
+      }, 700 * index);
+    });
+  }
+
+  function generateSequence() {
+    // 20% de chance de bônus (1 dígito a menos)
+    const isBonus = Math.random() < 0.2 && level > 1;
+    const length = isBonus ? level - 1 : level;
+
     const newSequence = [];
-    for (let i = 0; i < level; i++) {
+    for (let i = 0; i < length; i++) {
       newSequence.push(Math.floor(Math.random() * 10));
     }
     return newSequence;
-  };
+  }
 
-  /**
-   * Compara se o array de input do usuário é igual à sequência sorteada.
-   */
-  const isUserInputCorrect = (arr1, arr2) => {
+  function isUserInputCorrect(arr1, arr2) {
     if (arr1.length !== arr2.length) return false;
     for (let i = 0; i < arr1.length; i++) {
       if (arr1[i] !== arr2[i]) {
@@ -48,87 +75,101 @@ export default function RepetitionSpanExerciseScreen({ navigation }) {
       }
     }
     return true;
-  };
+  }
 
-  /**
-   * Inicia ou reseta o estado para uma nova rodada.
-   */
-  const startNewRound = () => {
-    // Gera a nova sequência
+  // Inicia ou reseta o estado para uma nova rodada
+  function startNewRound() {
     const seq = generateSequence();
     setSequence(seq);
     setDisplaySequence(true);
     setUserInput([]);
     setFeedback('');
     setShowNextButton(false);
+    setTentativasRestantes(3);
 
-    // Tempo de exibição da sequência (exemplo: 1000 ms por dígito)
-    // Você pode ajustar para ficar fixo ou dinâmico.
-    const displayTime = 1000 * level;
-
-    // Limpa qualquer timeout anterior e define um novo
     if (hideSequenceTimeout.current) {
       clearTimeout(hideSequenceTimeout.current);
     }
+    // Ex: no mínimo 2s, ou 1s por dígito
+    const displayTime = Math.max(4000, seq.length * 1000);
+
     hideSequenceTimeout.current = setTimeout(() => {
       setDisplaySequence(false);
     }, displayTime);
-  };
 
-  /**
-   * Trata clique do usuário num dígito
-   */
-  const handleDigitPress = (digit) => {
-    // Não permite digitar enquanto a sequência é exibida
-    if (displaySequence) return;
-    setUserInput((prev) => [...prev, digit]);
-  };
+    speakSequence(seq);
+  }
 
-  /**
-   * Verifica se a sequência do usuário está correta
-   */
-  const checkAnswer = () => {
+  // Verifica se o input do usuário corresponde à sequência
+  function checkAnswer() {
     if (isUserInputCorrect(userInput, sequence)) {
+      // ACERTOU
       setFeedback('Correto!');
-      setShowNextButton(true);
+
+      if (confettiRef.current) {
+        confettiRef.current.start();
+      }
+
+      // Pontuação e contadores
+      setScore((prev) => prev + Math.pow(2, level));
+      setAcertosNoNivel((prev) => prev + 1);
+
+      // 3 acertos para subir de nível
+      if (acertosNoNivel + 1 >= 3) {
+        setFeedback(`Você concluiu o nível ${level}! Subindo de nível...`);
+        setAcertosNoNivel(0);
+        setErrosNoNivel(0);
+        setLevel((prev) => prev + 1);
+      } else {
+        // Fica no mesmo nível, próxima rodada
+        setShowNextButton(true);
+      }
+
     } else {
-      setFeedback('Incorreto. Tente novamente.');
+      // ERROU
+      setFeedback('Incorreto.');
+      // Limpa o input para poder tentar de novo
+      setUserInput([]);
+
+      setTentativasRestantes((prev) => prev - 1);
+
+      if (tentativasRestantes - 1 <= 0) {
+        // Esgotou as tentativas
+        const newErros = errosNoNivel + 1;
+        setErrosNoNivel(newErros);
+        if (newErros >= 2) {
+          setLevel((prev) => (prev > 1 ? prev - 1 : 1));
+          setAcertosNoNivel(0);
+          setErrosNoNivel(0);
+          setFeedback('Você falhou 2 vezes: o nível diminuiu.');
+        } else {
+          setFeedback('Você usou todas as tentativas desta rodada.');
+        }
+        setShowNextButton(true);
+      }
     }
-  };
+  }
 
-  /**
-   * Passa para o próximo nível
-   */
-  const handleNext = () => {
-    setLevel((prev) => prev + 1);
-  };
-
-  // ==============================
-  // CICLO DE VIDA
-  // ==============================
-  // Sempre que o nível mudar, inicia uma nova rodada
   useEffect(() => {
     startNewRound();
     return () => {
-      // Cleanup: limpa o timeout ao desmontar
       if (hideSequenceTimeout.current) {
         clearTimeout(hideSequenceTimeout.current);
       }
     };
   }, [level]);
 
-  // ==============================
-  // RENDERIZAÇÃO DE COMPONENTES
-  // ==============================
+  function handleDigitPress(digit) {
+    if (displaySequence) return;
+    setUserInput((prev) => [...prev, digit]);
+  }
 
-  /**
-   * Renderiza o “teclado” de dígitos
-   */
+  function handleNextRound() {
+    startNewRound();
+  }
+
   const renderKeypad = () => {
-    // Você pode programar para exibir todos os dígitos [0..9] dinamicamente,
-    // ou fazer manualmente como no seu código original.
     const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-
     return (
       <View style={styles.keypadContainer}>
         <View style={styles.keypadRow}>
@@ -138,9 +179,9 @@ export default function RepetitionSpanExerciseScreen({ navigation }) {
               style={styles.digitButton}
               onPress={() => handleDigitPress(digit)}
               accessible={true}
-              accessibilityLabel={`Digito ${digit}`}
+              accessibilityLabel={`Dígito ${digit}`}
             >
-              <Text style={styles.digitButtonText}>{digit}</Text>
+              <Text style={[styles.digitButtonText, { fontSize: 32 }]}>{digit}</Text>
             </TouchableOpacity>
           ))}
         </View>
@@ -152,9 +193,9 @@ export default function RepetitionSpanExerciseScreen({ navigation }) {
               style={styles.digitButton}
               onPress={() => handleDigitPress(digit)}
               accessible={true}
-              accessibilityLabel={`Digito ${digit}`}
+              accessibilityLabel={`Dígito ${digit}`}
             >
-              <Text style={styles.digitButtonText}>{digit}</Text>
+              <Text style={[styles.digitButtonText, { fontSize: 32 }]}>{digit}</Text>
             </TouchableOpacity>
           ))}
         </View>
@@ -166,16 +207,15 @@ export default function RepetitionSpanExerciseScreen({ navigation }) {
               style={styles.digitButton}
               onPress={() => handleDigitPress(digit)}
               accessible={true}
-              accessibilityLabel={`Digito ${digit}`}
+              accessibilityLabel={`Dígito ${digit}`}
             >
-              <Text style={styles.digitButtonText}>{digit}</Text>
+              <Text style={[styles.digitButtonText, { fontSize: 32 }]}>{digit}</Text>
             </TouchableOpacity>
           ))}
         </View>
 
-        {/* A última “linha” com 0 ou botões especiais */}
         <View style={styles.keypadRow}>
-          {/* Botão de apagar (⌫) */}
+          {/* Botão de apagar */}
           <TouchableOpacity
             style={styles.actionButton}
             onPress={() => setUserInput((prev) => prev.slice(0, -1))}
@@ -186,19 +226,17 @@ export default function RepetitionSpanExerciseScreen({ navigation }) {
           </TouchableOpacity>
 
           {/* Dígito 0 */}
-          {digits.slice(9, 10).map((digit) => (
-            <TouchableOpacity
-              key={digit}
-              style={styles.digitButton}
-              onPress={() => handleDigitPress(digit)}
-              accessible={true}
-              accessibilityLabel={`Digito ${digit}`}
-            >
-              <Text style={styles.digitButtonText}>{digit}</Text>
-            </TouchableOpacity>
-          ))}
+          <TouchableOpacity
+            key={digits[9]}
+            style={styles.digitButton}
+            onPress={() => handleDigitPress(digits[9])}
+            accessible={true}
+            accessibilityLabel={`Dígito ${digits[9]}`}
+          >
+            <Text style={[styles.digitButtonText, { fontSize: 32 }]}>{digits[9]}</Text>
+          </TouchableOpacity>
 
-          {/* Botão de limpar (C) */}
+          {/* Botão de limpar */}
           <TouchableOpacity
             style={styles.actionButton}
             onPress={() => setUserInput([])}
@@ -214,43 +252,35 @@ export default function RepetitionSpanExerciseScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Treino de Memória Fonológica</Text>
-      <Text style={styles.levelText}>Nível: {level}</Text>
+      {/* Confetes */}
+      <ConfettiCannon
+        count={50}
+        origin={{ x: 200, y: 0 }}
+        autoStart={false}
+        fadeOut={true}
+        ref={confettiRef}
+      />
+
+      {/* Barra superior com título e score */}
+      <View style={styles.topBar}>
+        <Text style={styles.levelText}>Nível {level}</Text>
+        <Text style={styles.title}> </Text>
+        <Text style={styles.scoreText}>{score}</Text>
+      </View>
 
       {displaySequence ? (
         <View style={styles.sequenceContainer}>
-          {/* Exibe a sequência de forma visual */}
           <Text style={styles.sequenceText}>{sequence.join(' ')}</Text>
-
-          {/* Botão ou funcionalidade para reproduzir o áudio (TTS, por exemplo) */}
-          <TouchableOpacity
-            style={styles.audioButton}
-            onPress={() => {
-              // Aqui você poderia chamar algo como: speakSequence(sequence);
-              console.log('Reproduzir áudio da sequência');
-            }}
-          >
-            <Text style={styles.audioButtonText}>Ouvir Sequência</Text>
-          </TouchableOpacity>
         </View>
       ) : (
         <View style={styles.inputSection}>
-          <Text style={styles.instruction}>Digite a sequência:</Text>
-
           <View style={styles.userInputContainer}>
-            <Text style={styles.userInputText}>
-              {userInput.join(' ')}
-            </Text>
+            <Text style={styles.userInputText}>{userInput.join(' ')}</Text>
           </View>
 
           {renderKeypad()}
 
-          <TouchableOpacity
-            style={styles.checkButton}
-            onPress={checkAnswer}
-            accessible={true}
-            accessibilityLabel="Verificar sequência digitada"
-          >
+          <TouchableOpacity style={styles.checkButton} onPress={checkAnswer}>
             <Text style={styles.checkButtonText}>Verificar</Text>
           </TouchableOpacity>
 
@@ -259,13 +289,8 @@ export default function RepetitionSpanExerciseScreen({ navigation }) {
           )}
 
           {showNextButton && (
-            <TouchableOpacity
-              style={styles.nextButton}
-              onPress={handleNext}
-              accessible={true}
-              accessibilityLabel="Ir para próximo nível"
-            >
-              <Text style={styles.nextButtonText}>Próximo Nível</Text>
+            <TouchableOpacity style={styles.nextButton} onPress={handleNextRound}>
+              <Text style={styles.nextButtonText}>Próxima Rodada</Text>
             </TouchableOpacity>
           )}
         </View>
@@ -273,130 +298,3 @@ export default function RepetitionSpanExerciseScreen({ navigation }) {
     </View>
   );
 }
-
-// ==============================
-// ESTILOS (refatorados para um único objeto)
-// ==============================
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FAFAFA',
-    padding: 16,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 8,
-    color: '#333'
-  },
-  levelText: {
-    fontSize: 18,
-    marginBottom: 20,
-    color: '#666'
-  },
-  sequenceContainer: {
-    alignItems: 'center',
-    marginBottom: 20
-  },
-  sequenceText: {
-    fontSize: 40,
-    fontWeight: 'bold',
-    color: '#333'
-  },
-  audioButton: {
-    marginTop: 10,
-    padding: 10,
-    backgroundColor: '#6C63FF',
-    borderRadius: 5
-  },
-  audioButtonText: {
-    color: '#fff',
-    fontSize: 16
-  },
-  inputSection: {
-    width: '100%',
-    alignItems: 'center'
-  },
-  instruction: {
-    fontSize: 20,
-    marginBottom: 15,
-    color: '#555'
-  },
-  userInputContainer: {
-    minHeight: 40,
-    width: '80%',
-    borderWidth: 1,
-    borderColor: '#888',
-    marginBottom: 15,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5
-  },
-  userInputText: {
-    fontSize: 24,
-    color: '#333'
-  },
-  keypadContainer: {
-    width: '80%',
-    marginBottom: 20
-  },
-  keypadRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 10
-  },
-  digitButton: {
-    flex: 1,
-    marginHorizontal: 5,
-    backgroundColor: '#4CAF50',
-    paddingVertical: 15,
-    borderRadius: 5,
-    alignItems: 'center'
-  },
-  digitButtonText: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold'
-  },
-  actionButton: {
-    flex: 1,
-    marginHorizontal: 5,
-    backgroundColor: '#FF5722',
-    paddingVertical: 15,
-    borderRadius: 5,
-    alignItems: 'center'
-  },
-  actionButtonText: {
-    color: '#fff',
-    fontSize: 20
-  },
-  checkButton: {
-    backgroundColor: '#2196F3',
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    borderRadius: 5,
-    marginBottom: 10
-  },
-  checkButtonText: {
-    color: '#fff',
-    fontSize: 18
-  },
-  feedback: {
-    fontSize: 20,
-    color: '#333',
-    marginTop: 10
-  },
-  nextButton: {
-    backgroundColor: '#9C27B0',
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    borderRadius: 5,
-    marginTop: 10
-  },
-  nextButtonText: {
-    color: '#fff',
-    fontSize: 18
-  }
-});

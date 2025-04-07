@@ -8,7 +8,7 @@ import SpeechExerciseScreen from './src/app/speechExercise.js';
 import FlashcardScreen from './src/app/flashcardScreen.js';
 import FlashcardGameScreen from './src/app/flashcardGameScreen.js';
 import RepetitionSpanExerciseScreen from './src/app/repetitionSpanGame.js';
-
+import SyllableSpanExerciseScreen from './src/app/syllableSpanExerciseScreen.js';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -93,11 +93,18 @@ export default function App() {
           name="RepetitionSpanExercise"
           component={RepetitionSpanExerciseScreen}
           options={{
-            title: 'Treino de Memória Fonológica',
+            title: 'Treino de Memória',
             headerTitleStyle: {
               fontSize: 20,
               fontWeight: 'bold',
             }
+          }}
+        />
+        <Stack.Screen
+          name="SyllableSpanExercise"
+          component={SyllableSpanExerciseScreen}
+          options={{
+            title: 'Treino de Memória Fonológica',
           }}
         />
       </Stack.Navigator>
