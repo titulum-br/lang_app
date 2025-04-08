@@ -4,15 +4,20 @@
 1. [Application Overview](#application-overview)
 2. [Architecture](#architecture)
 3. [Navigation Flow](#navigation-flow)
-4. [Asset Management System](#asset-management-system)
-5. [Flashcard System](#flashcard-system)
+4. [Exercise Types](#exercise-types)
+5. [Asset Management System](#asset-management-system)
 6. [Screens](#screens)
 7. [Utilities](#utilities)
 8. [Scripts](#scripts)
+9. [Building and Deployment](#building-and-deployment)
 
 ## Application Overview
 
-Ling App is a language learning application designed for speech therapy and language development. It provides various exercises to help users practice word recognition, pronunciation, and language comprehension through interactive activities.
+Ling App is an application designed for aid in speech therapy and cognitive training. It provides various exercises to help users with:
+- Working memory through digit sequences
+- Phonological memory through syllable sequences
+- Word recognition and pronunciation
+- Language comprehension through interactive activities
 
 ## Architecture
 
@@ -20,18 +25,54 @@ The application is built using React Native and Expo, with a focus on modularity
 
 - **Component-Based**: UI elements are broken down into reusable components
 - **Asset Automation**: Media assets (audio, images) are managed through automated scripts
-- **Simplified Configuration**: Flashcard data is structured for easy management by non-developers
+- **Progressive Difficulty**: Exercises adapt to user performance
+- **Accessibility**: Built with accessibility features for speech therapy use
 
 ## Navigation Flow
 
 The navigation is structured as follows:
 
 1. **HomeScreen**: Entry point with access to main exercise categories
-2. **SpeechExerciseScreen**: Hub for all speech-related exercises
-   - Jogo de Nomes (Name Game): First exercise
-   - Cartões de Palavras (Word Cards): Second exercise
-3. **FlashcardGameScreen**: Interactive flashcard matching game
-4. **FlashcardScreen**: Simple word cards with audio pronunciation
+2. **SpeechExerciseScreen**: Hub for speech-related exercises
+   - Jogo de Nomes (Name Game): Interactive word matching
+   - Cartões de Palavras (Word Cards): Word recognition practice
+3. **Memory Training Exercises**:
+   - RepetitionSpanExercise: Digit sequence memory training
+   - SyllableSpanExercise: Syllable sequence memory training
+4. **FlashcardGameScreen**: Interactive flashcard matching game
+5. **FlashcardScreen**: Simple word cards with audio pronunciation
+
+## Exercise Types
+
+### Memory Training Exercises
+
+#### Digit Span Exercise
+- Progressive difficulty levels
+- Audio feedback for each digit
+- Visual feedback with confetti on success
+- Three attempts per round
+- Level progression based on performance
+
+#### Syllable Span Exercise
+- 4-minute time limit
+- Visual progress indicator
+- Three consonant-based syllable grids
+- Audio pronunciation support
+- Progressive difficulty system
+
+### Flashcard System
+
+#### Word Cards
+- Category-based organization
+- Audio pronunciation support
+- Progressive hint system
+- Image-word association
+
+#### Name Game
+- Interactive matching interface
+- Audio feedback
+- Visual rewards
+- Multiple difficulty levels
 
 ## Asset Management System
 
@@ -52,75 +93,64 @@ Image files follow this naming convention:
 
 Example: `objeto-animal-cachorro-1.png`
 
-## Flashcard System
-
-### Data Structure
-
-The flashcard system uses a simplified data structure:
-
-```json
-{
-  "category": {
-    "item": {
-      "name": "Display Name",
-      "tip": "Syllable Hint",
-      "audioSyllable": "audio-syllable-language-item-syllable",
-      "audioWord": "audio-word-language-item",
-      "images": "objeto-category-item"
-    }
-  }
-}
-```
-
-At runtime, the app processes this data and matches it with available assets:
-
-1. `audioSyllable` is expanded to match all available syllable audio files
-2. `audioWord` is expanded to match all available word audio files
-3. `images` is expanded to match all available images for that item
-
-### Processing Flow
-
-1. The app reads `flashcards.json` at startup
-2. The `processFlashcards()` function expands the patterns into actual file references
-3. When displaying a flashcard, the app randomly selects from available assets
-4. When playing audio, the app randomly selects from available audio files
-
 ## Screens
 
 ### HomeScreen
 - **Purpose**: Main entry point for the application
 - **Features**: Navigation to exercise categories
-- **Location**: `screens/HomeScreen.js`
+- **Location**: `src/app/home.js`
 
 ### SpeechExerciseScreen
 - **Purpose**: Hub for speech-related exercises
 - **Features**: Grid of exercise options
-- **Location**: `screens/SpeechExerciseScreen.js`
+- **Location**: `src/app/speechExercise.js`
+
+### RepetitionSpanExerciseScreen
+- **Purpose**: Digit sequence memory training
+- **Features**: 
+  - Progressive difficulty
+  - Audio feedback
+  - Visual rewards
+  - Performance tracking
+- **Location**: `src/app/repetitionSpanGame.js`
+
+### SyllableSpanExerciseScreen
+- **Purpose**: Syllable sequence memory training
+- **Features**:
+  - Time-based challenge
+  - Visual progress indicator
+  - Dynamic syllable grids
+  - Audio pronunciation
+- **Location**: `src/app/syllableSpanExerciseScreen.js`
 
 ### FlashcardGameScreen
 - **Purpose**: Interactive flashcard matching game
 - **Features**: Image-word matching, audio playback
-- **Location**: `screens/FlashcardGameScreen.js`
+- **Location**: `src/app/flashcardGameScreen.js`
 
 ### FlashcardScreen
 - **Purpose**: Simple word cards with audio pronunciation
 - **Features**: Category selection, syllable/word audio playback, image display
-- **Location**: `app/screens/FlashcardScreen.js`
+- **Location**: `src/app/flashcardScreen.js`
 
 ## Utilities
 
-### flashcardProcessor.js
+### flashcardUtils.js
 - **Purpose**: Processes flashcard data and matches with available assets
-- **Location**: `app/utils/flashcardProcessor.js`
+- **Location**: `src/utils/flashcardUtils.js`
 - **Key Functions**:
-  - `processFlashcards(flashcards)`: Expands simplified flashcard data to match available assets
+  - `processFlashcards(flashcards)`: Expands simplified flashcard data
   - `findSyllableAudio(baseName)`: Finds matching syllable audio files
   - `findWordAudio(baseName)`: Finds matching word audio files
   - `findImages(basePattern)`: Finds matching image files
-  - `getRandomAudio(audioFiles)`: Gets a random audio file from matching files
-  - `getRandomImage(imageFiles)`: Gets a random image from matching files
-  - `setLanguage(language)`: Sets the current language
-  - `getLanguage()`: Gets the current language
+
+### audioUtils.js
+- **Purpose**: Handles audio playback and management
+- **Location**: `src/utils/audioUtils.js`
+- **Key Functions**:
+  - Audio file loading
+  - Playback control
+  - Error handling
 
 ## Scripts
 
@@ -130,11 +160,6 @@ At runtime, the app processes this data and matches it with available assets:
 - **Functions**:
   - `generateAudioImports()`: Scans audio directory and generates `audioImports.js`
   - `generateImageImports()`: Scans images directory and generates `imageImports.js`
-  - `main()`: Main execution function
-
-The script generates two files:
-- **audioImports.js**: Contains imports for all audio files, categorized by type
-- **imageImports.js**: Contains imports for all image files, with grouping by prefix
 
 ### renameAudioFiles.js
 - **Purpose**: Utility to rename audio files (e.g., remove accents)
@@ -143,7 +168,7 @@ The script generates two files:
   - `removeAccents(str)`: Removes accents from a string
   - `renameAudioFiles()`: Renames audio files in the audio directory
 
-## Integration with Expo Application Services (EAS)
+## Building and Deployment
 
 The application is configured for building with EAS:
 
@@ -155,34 +180,15 @@ The application is configured for building with EAS:
   - `preview2`: Alternative testing build with assembleRelease
   - `production`: For production builds (AAB)
 
-## Asset File Structure
-
-```
-assets/
-├── audio/
-│   ├── audio-syllable-pt_br-*.mp3
-│   ├── audio-word-pt_br-*.mp3
-│   └── ...
-├── images/
-│   ├── objeto-animal-*.png
-│   ├── objeto-fruta-*.png
-│   └── ...
-├── audioImports.js (auto-generated)
-├── imageImports.js (auto-generated)
-└── flashcards.json
-```
+### Build Commands
+1. Development: `eas build -p android --profile development`
+2. Testing: `eas build -p android --profile preview`
+3. Production: `eas build -p android --profile production`
 
 ## Development Workflow
 
 1. Artists add audio/image files following naming conventions
 2. Run `npm run generate-imports` to update imports (automatic on app start)
-3. Update `flashcards.json` to add new items if needed
-4. The app automatically finds and uses all matching assets
-
-## Building the Application
-
-To build the application:
-
-1. For development: `eas build -p android --profile development`
-2. For testing: `eas build -p android --profile preview`
-3. For production: `eas build -p android --profile production` 
+3. Update exercise data if needed
+4. Test the application
+5. Build and deploy using EAS 

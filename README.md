@@ -1,28 +1,43 @@
 # Ling App
 
-A React Native educational app for learning Portuguese through flashcards and audio.
+A React Native app designed for aid speech therapy and language development, featuring interactive exercises for Portuguese language learning.
 
 ## Features
 
-- Flashcard-based learning system
-- Audio pronunciation support
-- Multiple categories of words
-- Progressive hint system
-- 10-round game mode
+- **Memory Training Exercises**
+  - Digit Span Exercise: Practice working memory with number sequences
+  - Syllable Span Exercise: Enhance phonological memory with syllable sequences
+  - Progressive difficulty levels
+  - Audio feedback and visual rewards
+
+- **Flashcard System**
+  - Word recognition exercises
+  - Audio pronunciation support
+  - Multiple categories of words
+  - Progressive hint system
+  - Interactive matching game
+
+- **Speech Exercises**
+  - Name Game (Jogo de Nomes)
+  - Word Cards (Cartões de Palavras)
+  - Audio pronunciation support
+  - Visual feedback
 
 ## Project Structure
 
 ```
 ling_app/
 ├── assets/
-│   ├── audio/          # Audio files (not tracked in git)
+│   ├── audio/          # Audio files for pronunciation
 │   ├── images/         # Image assets
-│   ├── audioImports.js # Audio file imports
-│   └── imageImports.js # Image file imports
-├── screens/            # App screens
-├── styles/            # Style definitions
-├── utils/             # Utility functions
-└── App.js             # Main app component
+│   ├── audioImports.js # Audio file imports (auto-generated)
+│   └── imageImports.js # Image file imports (auto-generated)
+├── src/
+│   ├── app/           # Main app screens
+│   ├── styles/        # Style definitions
+│   └── utils/         # Utility functions
+├── scripts/           # Asset management scripts
+└── App.js            # Main app component
 ```
 
 ## Setup
@@ -54,5 +69,13 @@ Example:
 1. Audio files are not tracked in git to keep the repository size manageable
 2. When adding new audio files:
    - Place them in `assets/audio/`
-   - Update `audioImports.js` with the new file references
-   - Test the audio playback in the app 
+   - Run `npm run generate-imports` to update the import files
+   - Test the audio playback in the app
+
+## Building the Application
+
+To build the application:
+
+1. For development: `eas build -p android --profile development`
+2. For testing: `eas build -p android --profile preview`
+3. For production: `eas build -p android --profile production` 
