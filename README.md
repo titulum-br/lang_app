@@ -55,10 +55,4 @@ Example:
 2. When adding new audio files:
    - Place them in `assets/audio/`
    - Update `audioImports.js` with the new file references
-   - Test the audio playback in the app
-
-## License
-
-Proprietary and Confidential
-Unauthorized copying of this file, via any medium is strictly prohibited.
-All rights reserved. 
+   - Test the audio playback in the app 

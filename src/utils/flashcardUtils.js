@@ -1,9 +1,5 @@
 /**
- * flashcardUtils.js
- * 
- * PROPRIETARY AND CONFIDENTIAL
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * All rights reserved.
+ * Utility functions for flashcard game functionality
  */
 
 import { imageMap } from '../../assets/imageImports';

@@ -1,11 +1,5 @@
 /**
- * imageImports.js
- * 
- * PROPRIETARY AND CONFIDENTIAL
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * All rights reserved.
- * 
- * THIS FILE IS AUTO-GENERATED - DO NOT MODIFY DIRECTLY
+ * Image asset imports mapping
  */
 
 // Create an image map with all available image files

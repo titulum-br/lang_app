@@ -1,9 +1,5 @@
 /**
- * FlashcardGameStyles.js
- * 
- * PROPRIETARY AND CONFIDENTIAL
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * All rights reserved.
+ * Styles for the flashcard game screen
  */
 
 import { StyleSheet } from 'react-native';

@@ -1,9 +1,5 @@
 /**
- * audioUtils.js
- * 
- * PROPRIETARY AND CONFIDENTIAL
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * All rights reserved.
+ * Utility functions for audio handling
  */
 
 import { Audio } from 'expo-av';

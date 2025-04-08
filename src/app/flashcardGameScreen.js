@@ -1,9 +1,5 @@
 /**
- * FlashcardGameScreen.js
- * 
- * PROPRIETARY AND CONFIDENTIAL
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * All rights reserved.
+ * Main flashcard game screen component
  */
 
 import React, { useState, useEffect } from 'react';
